@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/benthicdate/Benthic/actions/workflows/ci.yml"><img alt="tests" src="https://github.com/benthicdate/Benthic/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/benthicdate/Benthic/actions/workflows/docker.yml"><img alt="container" src="https://github.com/benthicdate/Benthic/actions/workflows/docker.yml/badge.svg"></a>
+  <a href="https://github.com/benthicdate/Benthic/actions/workflows/ci.yml"><img alt="tests" src="https://github.com/benthicdate/Benthic/actions/workflows/ci.yml/badge.svg?branch=master"></a>
+  <a href="https://github.com/benthicdate/Benthic/actions/workflows/docker.yml"><img alt="container" src="https://github.com/benthicdate/Benthic/actions/workflows/docker.yml/badge.svg?branch=master"></a>
   <a href="https://github.com/benthicdate/Benthic/pkgs/container/benthic"><img alt="ghcr" src="https://img.shields.io/badge/ghcr.io-image-2496ed?logo=docker&logoColor=white"></a>
   <a href="https://benthic.one"><img alt="site" src="https://img.shields.io/badge/site-benthic.one-f65e06?logo=googlechrome&logoColor=white"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-3ecf8e?logo=python&logoColor=white">
