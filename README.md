@@ -61,7 +61,7 @@ turned into something useful — the protocol is where scattered, idle compute s
 - 🌐 **Website:** https://benthic.one
 - 📈 **Live dashboard:** https://benthic.one/terminal.html
 - 📄 **Whitepaper:** https://benthic.one/index.html
-- 🪙 **Buy $BENTHIC:** https://ponsfamily.com/launchpad
+- 🪙 **Buy $BENTHIC:** https://ponsfamily.com/launchpad/0x038a2e2839d2be8b4e4180bc75e229224eca7a20
 
 ---
 
