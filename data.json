@@ -1,0 +1,340 @@
+{
+  "as_of": "2026-07-22",
+  "window_days": 30,
+  "compute_index": 73,
+  "phase": "Expansion",
+  "phase_probs": {
+    "bootstrap": 0.11,
+    "expansion": 0.72,
+    "steady": 0.17
+  },
+  "network": {
+    "active_miners": 1284,
+    "tflops": 48250,
+    "mined_epoch": 184320,
+    "reward_per_tflop": 0.42,
+    "jobs_verified": 92140,
+    "verify_rate": 0.994
+  },
+  "drivers": [
+    {
+      "k": "Active miners",
+      "v": "1,284",
+      "note": "+8.2% · 24h",
+      "tone": "good"
+    },
+    {
+      "k": "Network compute",
+      "v": "48.3 PFLOPs",
+      "note": "+5.1% · 24h",
+      "tone": "good"
+    },
+    {
+      "k": "Verified-job rate",
+      "v": "99.4%",
+      "note": "nominal",
+      "tone": "good"
+    },
+    {
+      "k": "Reward / TFLOP·h",
+      "v": "0.42 BENTHIC",
+      "note": "−1.3% · 24h",
+      "tone": "bad"
+    },
+    {
+      "k": "Pool queue depth",
+      "v": "3.1k jobs",
+      "note": "steady",
+      "tone": "neu"
+    }
+  ],
+  "compute_chart": {
+    "dates": [
+      "2026-06-23",
+      "2026-06-24",
+      "2026-06-25",
+      "2026-06-26",
+      "2026-06-27",
+      "2026-06-28",
+      "2026-06-29",
+      "2026-06-30",
+      "2026-07-01",
+      "2026-07-02",
+      "2026-07-03",
+      "2026-07-04",
+      "2026-07-05",
+      "2026-07-06",
+      "2026-07-07",
+      "2026-07-08",
+      "2026-07-09",
+      "2026-07-10",
+      "2026-07-11",
+      "2026-07-12",
+      "2026-07-13",
+      "2026-07-14",
+      "2026-07-15",
+      "2026-07-16",
+      "2026-07-17",
+      "2026-07-18",
+      "2026-07-19",
+      "2026-07-20",
+      "2026-07-21",
+      "2026-07-22"
+    ],
+    "compute": [
+      40.0,
+      48.1,
+      45.2,
+      47.8,
+      42.7,
+      37.4,
+      45.2,
+      47.2,
+      52.8,
+      59.3,
+      51.7,
+      50.7,
+      50.1,
+      47.7,
+      58.7,
+      62.6,
+      62.2,
+      65.3,
+      56.7,
+      55.5,
+      61.6,
+      62.2,
+      71.7,
+      74.2,
+      67.5,
+      68.8,
+      64.2,
+      65.2,
+      76.2,
+      73.0
+    ],
+    "price": [
+      0.0109,
+      0.012,
+      0.0116,
+      0.011,
+      0.0105,
+      0.0108,
+      0.0119,
+      0.0116,
+      0.0113,
+      0.0118,
+      0.012,
+      0.0122,
+      0.0117,
+      0.0109,
+      0.0119,
+      0.0129,
+      0.013,
+      0.0126,
+      0.0115,
+      0.0117,
+      0.0129,
+      0.013,
+      0.013,
+      0.0127,
+      0.0127,
+      0.0135,
+      0.013,
+      0.0124,
+      0.0129,
+      0.0133
+    ]
+  },
+  "pool_dist": [
+    {
+      "label": "Abyssal Pool",
+      "share": 0.34,
+      "color": "#f65e06"
+    },
+    {
+      "label": "Trench Collective",
+      "share": 0.27,
+      "color": "#ff8a3d"
+    },
+    {
+      "label": "Solo divers",
+      "share": 0.21,
+      "color": "#ffb885"
+    },
+    {
+      "label": "Reef Syndicate",
+      "share": 0.18,
+      "color": "#b5471a"
+    }
+  ],
+  "leaderboard": [
+    {
+      "miner": "abyss.bnth",
+      "tflops": 6120,
+      "share": 0.127,
+      "reward": "23.4k",
+      "status": "online"
+    },
+    {
+      "miner": "kraken-07",
+      "tflops": 4980,
+      "share": 0.103,
+      "reward": "19.1k",
+      "status": "online"
+    },
+    {
+      "miner": "mariana.eth",
+      "tflops": 3910,
+      "share": 0.081,
+      "reward": "15.0k",
+      "status": "online"
+    },
+    {
+      "miner": "nautilus",
+      "tflops": 3120,
+      "share": 0.065,
+      "reward": "11.9k",
+      "status": "online"
+    },
+    {
+      "miner": "deepcurrent",
+      "tflops": 2670,
+      "share": 0.055,
+      "reward": "10.2k",
+      "status": "online"
+    },
+    {
+      "miner": "tentacle.io",
+      "tflops": 2040,
+      "share": 0.042,
+      "reward": "7.8k",
+      "status": "idle"
+    },
+    {
+      "miner": "benthos-lab",
+      "tflops": 1610,
+      "share": 0.033,
+      "reward": "6.2k",
+      "status": "online"
+    }
+  ],
+  "history": [
+    "l",
+    "m",
+    "l",
+    "l",
+    "l",
+    "l",
+    "l",
+    "l",
+    "m",
+    "m",
+    "m",
+    "m",
+    "m",
+    "l",
+    "m",
+    "m",
+    "m",
+    "m",
+    "m",
+    "m",
+    "m",
+    "m",
+    "h",
+    "h",
+    "m",
+    "h",
+    "m",
+    "m",
+    "h",
+    "h"
+  ],
+  "phase_stats": {
+    "Bootstrap": {
+      "util": 0.31,
+      "reward": 0.61,
+      "share": 19,
+      "dur": 8
+    },
+    "Expansion": {
+      "util": 0.68,
+      "reward": 0.42,
+      "share": 57,
+      "dur": 21
+    },
+    "Steady": {
+      "util": 0.86,
+      "reward": 0.28,
+      "share": 24,
+      "dur": 34
+    }
+  },
+  "token": {
+    "symbol": "BENTHIC",
+    "max_supply": "1,000,000,000",
+    "circulating": "142,600,000",
+    "mined_pct": 14.3,
+    "emission_epoch": "184,320",
+    "next_halving": "epoch 26,280"
+  },
+  "params": {
+    "chain": "Robinhood Chain (L2)",
+    "contract": "not deployed · preview",
+    "epoch": "1 h",
+    "work": "Proof of Useful Compute",
+    "verification": "redundant + challenge",
+    "pool_fee": "1.5%"
+  },
+  "feed": [
+    {
+      "epoch": "2026-07-22 · 14:00",
+      "phase": "Expansion",
+      "compute": "48.3 PF",
+      "miners": 1284,
+      "mined": "184.3k",
+      "status": "finalized"
+    },
+    {
+      "epoch": "2026-07-22 · 13:00",
+      "phase": "Expansion",
+      "compute": "47.6 PF",
+      "miners": 1271,
+      "mined": "181.9k",
+      "status": "finalized"
+    },
+    {
+      "epoch": "2026-07-22 · 12:00",
+      "phase": "Expansion",
+      "compute": "47.9 PF",
+      "miners": 1268,
+      "mined": "182.7k",
+      "status": "finalized"
+    },
+    {
+      "epoch": "2026-07-22 · 11:00",
+      "phase": "Expansion",
+      "compute": "46.8 PF",
+      "miners": 1255,
+      "mined": "179.2k",
+      "status": "finalized"
+    },
+    {
+      "epoch": "2026-07-22 · 10:00",
+      "phase": "Bootstrap",
+      "compute": "45.1 PF",
+      "miners": 1240,
+      "mined": "173.6k",
+      "status": "finalized"
+    },
+    {
+      "epoch": "2026-07-22 · 09:00",
+      "phase": "Expansion",
+      "compute": "46.2 PF",
+      "miners": 1233,
+      "mined": "177.0k",
+      "status": "finalized"
+    }
+  ]
+}
