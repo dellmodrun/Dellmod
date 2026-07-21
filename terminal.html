@@ -17,15 +17,15 @@
     --line:rgba(255,255,255,.07); --line2:rgba(255,255,255,.045);
     --ink:#e7e9ef; --head:#f6f7fa; --muted:#95a0b3; --faint:#69707f;
     --o:#f65e06; --o2:#ff8a3d; --o3:#ffb27a;
-    --up:#3ecf8e; --down:#ff6b8a; --warn:#f5b544;
+    --up:#3ecf8e; --warn:#f5b544;
     --shadow:0 10px 30px -12px rgba(0,0,0,.6);
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;color:var(--ink);font-family:"Inter",system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased;
     background:
-      radial-gradient(900px 500px at 78% -8%, rgba(246,94,6,.13), transparent 60%),
-      radial-gradient(700px 500px at 8% 4%, rgba(255,138,61,.06), transparent 55%),
+      radial-gradient(900px 500px at 78% -8%, rgba(246,94,6,.12), transparent 60%),
+      radial-gradient(700px 500px at 8% 4%, rgba(255,138,61,.05), transparent 55%),
       linear-gradient(180deg,var(--bg2),var(--bg));
     background-attachment:fixed;min-height:100vh}
   a{color:var(--o2);text-decoration:none} a:hover{text-decoration:underline}
@@ -37,11 +37,10 @@
   .topbar img{height:30px;width:auto}
   .topbar .name{font-family:"Space Grotesk",sans-serif;font-size:21px;font-weight:600;letter-spacing:.3px;color:var(--head)}
   .badge{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
-    color:var(--up);background:rgba(62,207,142,.1);border:1px solid rgba(62,207,142,.28);border-radius:999px;padding:3px 10px}
-  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--up);box-shadow:0 0 8px var(--up);animation:pulse 1.9s ease-in-out infinite}
+    color:var(--warn);background:rgba(245,181,68,.1);border:1px solid rgba(245,181,68,.3);border-radius:999px;padding:3px 10px}
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--warn);box-shadow:0 0 8px var(--warn);animation:pulse 1.9s ease-in-out infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
   .spacer{flex:1}
-  .stamp{font-size:11.5px;color:var(--faint)}
   .topbar .wp{font-size:13px;color:var(--muted);margin-left:6px}
 
   .tabs{display:flex;gap:6px;padding:14px 30px 0;max-width:1200px;margin:0 auto}
@@ -52,8 +51,8 @@
   .wrap{max-width:1200px;margin:0 auto;padding:20px 30px 90px}
   .view{display:none;animation:fade .3s ease} .view.active{display:block}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .grid{display:grid;gap:20px}.row2{grid-template-columns:1fr 1fr}.row12{grid-template-columns:1.05fr 1fr}.row3{grid-template-columns:repeat(3,1fr)}
-  @media(max-width:860px){.row2,.row12,.row3{grid-template-columns:1fr}}
+  .grid{display:grid;gap:20px}.row2{grid-template-columns:1fr 1fr}.row12{grid-template-columns:1.05fr 1fr}
+  @media(max-width:860px){.row2,.row12{grid-template-columns:1fr}}
 
   .card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:20px;
     padding:22px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
@@ -61,68 +60,38 @@
   .card h2{margin:0 0 3px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
   .card .sub{font-size:12.5px;color:var(--muted);margin-bottom:16px}
 
-  /* KPI tiles */
+  /* pre-launch status banner */
+  .statusbar{display:flex;gap:18px;align-items:flex-start;
+    background:linear-gradient(180deg,rgba(245,181,68,.1),rgba(22,27,38,.6));
+    border:1px solid rgba(245,181,68,.32);border-radius:20px;padding:20px 24px;margin-bottom:22px}
+  .statusbar .beacon{width:14px;height:14px;border-radius:50%;background:var(--warn);flex:0 0 auto;margin-top:3px;
+    box-shadow:0 0 0 0 rgba(245,181,68,.5);animation:ring 2.1s infinite}
+  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(245,181,68,.45)}70%{box-shadow:0 0 0 14px rgba(245,181,68,0)}100%{box-shadow:0 0 0 0 rgba(245,181,68,0)}}
+  .st-title{font-family:"Space Grotesk",sans-serif;font-weight:600;color:var(--head);font-size:16px}
+  .st-sub{color:var(--muted);font-size:13px;margin-top:4px;line-height:1.6;max-width:760px}
+  .st-cta{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+  .btn{font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:999px;border:1px solid var(--line);color:var(--ink)}
+  .btn.p{background:linear-gradient(180deg,var(--o),#e5560a);border-color:transparent;color:#fff}
+  .btn:hover{text-decoration:none;filter:brightness(1.08)}
+
+  .pending{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--warn);
+    background:rgba(245,181,68,.1);border:1px solid rgba(245,181,68,.28);border-radius:999px;padding:2px 9px}
   .tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .tile{background:var(--tile);border:1px solid var(--line2);border-radius:14px;padding:14px 15px}
-  .tile .lbl{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);margin-bottom:7px}
-  .tile .val{font-family:"Space Grotesk",sans-serif;font-size:22px;font-weight:600;color:var(--head);line-height:1}
-  .tile .val small{font-size:12px;color:var(--muted);font-weight:500}
-  .tile .chg{font-size:11.5px;margin-top:6px}
-
-  /* gauge ring */
-  .ring{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px 0}
-  .ringval{font-family:"Space Grotesk",sans-serif;font-size:46px;font-weight:700;fill:var(--head)}
-  .phase-tag{margin-top:2px;font-size:13px;font-weight:600;padding:5px 16px;border-radius:999px;
-    color:var(--o2);background:rgba(246,94,6,.1);border:1px solid rgba(246,94,6,.32)}
-
-  /* pills */
-  .pills{display:flex;gap:10px;margin-top:2px}
-  .pill{flex:1;background:var(--tile);border:1px solid var(--line2);border-radius:12px;padding:11px 12px}
-  .pill .pk{font-size:11.5px;color:var(--muted);text-transform:capitalize}
-  .pill .pv{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--faint);margin-top:5px}
-  .pill .bar{height:6px;border-radius:4px;background:rgba(255,255,255,.06);overflow:hidden;margin-top:8px}
-  .pill .bar>i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--o),var(--o2))}
-  .pill.cur{border-color:rgba(246,94,6,.45);background:linear-gradient(180deg,rgba(246,94,6,.12),var(--tile))}
-  .pill.cur .pk{color:var(--o2);font-weight:600}
-
-  /* driver rows */
-  .drv{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line2);font-size:13.5px}
-  .drv:last-child{border-bottom:none}.drv .k{color:var(--muted)}
-  .drv .v{font-family:"JetBrains Mono",monospace;font-weight:500}
-  .drv .n{color:var(--faint);font-weight:400;font-size:11.5px;margin-left:8px}
-  .up{color:var(--up)}.down{color:var(--down)}.neu{color:var(--warn)}
-
+  .tile .lbl{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);margin-bottom:9px}
+  .tile .dash{font-family:"Space Grotesk",sans-serif;font-size:24px;font-weight:600;color:var(--faint);line-height:1}
+  .skeleton{background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(255,255,255,.1),rgba(255,255,255,.04));
+    background-size:200% 100%;animation:sh 1.7s infinite linear;border-radius:7px;height:14px}
+  @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+  .plot{height:200px;border-radius:14px;border:1px dashed var(--line);background:
+    repeating-linear-gradient(90deg,transparent,transparent 46px,rgba(255,255,255,.02) 46px,rgba(255,255,255,.02) 47px);
+    display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:13px;text-align:center;padding:16px}
   table{width:100%;border-collapse:collapse;font-size:13px}
-  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line2)}
+  th,td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--line2)}
   tbody tr:last-child td{border-bottom:none}
   th{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);font-weight:600}
-  td.n{text-align:right;font-family:"JetBrains Mono",monospace}
-  tr.cur td{background:rgba(246,94,6,.07)}
-  .bar-h{display:inline-block;height:8px;border-radius:5px;vertical-align:middle;background:linear-gradient(90deg,var(--o),var(--o2))}
-  .stat{display:inline-flex;align-items:center;gap:6px;font-size:12px}
-  .stat .d{width:7px;height:7px;border-radius:50%}
-  .on .d{background:var(--up)}.on{color:var(--up)}
-  .idle .d{background:var(--warn)}.idle{color:var(--warn)}
-
-  .legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-top:14px;flex-wrap:wrap}
-  .legend span{display:inline-flex;align-items:center;gap:7px}.sw{width:11px;height:11px;border-radius:4px;display:inline-block}
-
-  .hist{display:flex;gap:3px;margin-top:8px;flex-wrap:wrap}
-  .hist i{width:15px;height:26px;border-radius:5px;display:block}
-
-  .kv{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line2);font-size:13.5px}
+  .kv{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line2);font-size:13.5px}
   .kv:last-child{border-bottom:none}.kv .k{color:var(--muted)}.kv .v{font-family:"JetBrains Mono",monospace}
-  .prog{height:9px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden;margin:10px 0 4px}
-  .prog>i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--o),var(--o2))}
-
-  .flow{display:flex;align-items:stretch;gap:12px;margin-top:6px}
-  .fnode{flex:1;background:var(--tile);border:1px solid var(--line2);border-radius:14px;padding:14px 16px;min-width:0}
-  .fnode .l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--o2);margin-bottom:8px;font-weight:600}
-  .fnode .t{color:var(--ink);line-height:1.65}.fnode .t.mono{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted)}
-  .farrow{display:flex;align-items:center;color:var(--o2);font-size:18px;flex:0 0 20px}
-  @media(max-width:600px){.flow{flex-direction:column}.farrow{transform:rotate(90deg);justify-content:center}}
-
-  .note{font-size:11.5px;color:var(--faint);margin-top:12px;line-height:1.6}
   .foot{margin-top:26px;font-size:12px;color:var(--faint);text-align:center;line-height:1.7}
 </style>
 </head>
@@ -130,10 +99,8 @@
 <div class="topbar">
   <img src="assets/logo.png" alt="Benthic" />
   <span class="name">Benthic</span>
-  <span class="badge"><span class="dot"></span>network live</span>
+  <span class="badge"><span class="dot"></span>pre-launch</span>
   <span class="spacer"></span>
-  <span class="stamp" id="asof">loading…</span>
-  <span class="stamp" id="refreshed" style="margin-left:10px"></span>
   <a class="wp" href="index.html">Whitepaper →</a>
 </div>
 <nav class="tabs">
@@ -143,78 +110,52 @@
 </nav>
 <div class="wrap">
 
+  <div class="statusbar">
+    <span class="beacon"></span>
+    <div>
+      <div class="st-title">The Benthic network hasn't launched yet</div>
+      <div class="st-sub">Mining is not live on Robinhood Chain. Real-time compute, miner and $BENTHIC
+        telemetry will stream into this dashboard the moment the network goes online — nothing here is
+        simulated or placeholder data. Follow along for the go-live.</div>
+      <div class="st-cta">
+        <a class="btn p" href="https://x.com/benthicdate" target="_blank" rel="noopener">Follow for launch</a>
+        <a class="btn" href="index.html">Read the whitepaper</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== NETWORK ===== -->
   <section class="view active" id="view-network">
-    <div class="grid row12">
-      <div class="card ring">
-        <h2 style="align-self:flex-start">Network Compute Index</h2>
-        <svg viewBox="0 0 220 200" style="width:100%;max-width:250px">
-          <defs>
-            <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
-          </defs>
-          <circle cx="110" cy="104" r="82" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="15"/>
-          <circle id="ringArc" cx="110" cy="104" r="82" fill="none" stroke="url(#ring)" stroke-width="15" stroke-linecap="round"
-                  stroke-dasharray="0 999" transform="rotate(-90 110 104)"/>
-          <text id="ringVal" class="ringval" x="110" y="112" text-anchor="middle">–</text>
-          <text id="ringSub" x="110" y="136" text-anchor="middle" font-size="11.5" fill="#8b93a3">utilization</text>
-        </svg>
-        <div class="phase-tag" id="phaseTag">–</div>
-      </div>
-      <div class="card">
-        <h2>Live network</h2>
-        <div class="sub">aggregate across all connected miners</div>
-        <div class="tiles" id="tiles"></div>
-        <h2 style="margin-top:20px">Network drivers</h2>
-        <div id="drivers"></div>
+    <div class="card">
+      <h2>Live network <span class="pending">awaiting launch</span></h2>
+      <div class="sub">these metrics begin streaming the moment the network goes live</div>
+      <div class="tiles">
+        <div class="tile"><div class="lbl">Active miners</div><div class="dash">—</div></div>
+        <div class="tile"><div class="lbl">Network compute</div><div class="dash">—</div></div>
+        <div class="tile"><div class="lbl">Mined · epoch</div><div class="dash">—</div></div>
+        <div class="tile"><div class="lbl">Reward / TFLOP·h</div><div class="dash">—</div></div>
       </div>
     </div>
-
     <div class="card" style="margin-top:20px">
-      <h2>Network compute · trailing window</h2>
-      <div class="sub" id="chartSub">normalized compute index · solid = compute · dashed = BENTHIC price</div>
-      <svg id="chart" viewBox="0 0 720 260" style="width:100%;height:auto;display:block"></svg>
-    </div>
-
-    <div class="grid row2" style="margin-top:20px">
-      <div class="card">
-        <h2>Pool distribution</h2>
-        <div class="sub">share of network compute by pool</div>
-        <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
-          <svg viewBox="0 0 160 160" style="width:150px;height:150px;flex:0 0 auto"><g id="donut"></g>
-            <text id="donutC" x="80" y="78" text-anchor="middle" font-family="Space Grotesk" font-size="24" font-weight="700" fill="#f6f7fa">–</text>
-            <text x="80" y="96" text-anchor="middle" font-size="10" fill="#69707f">pools</text>
-          </svg>
-          <div id="poolLegend" style="flex:1;min-width:150px"></div>
-        </div>
-      </div>
-      <div class="card">
-        <h2>Top miners · compute share</h2>
-        <div class="sub">largest contributors this epoch</div>
-        <div id="topMiners"></div>
-      </div>
+      <h2>Network compute <span class="pending">awaiting launch</span></h2>
+      <div class="sub">real-time compute &amp; $BENTHIC price, per epoch</div>
+      <div class="plot">Live chart appears once the first mining epoch settles on Robinhood Chain.</div>
     </div>
   </section>
 
   <!-- ===== MINERS ===== -->
   <section class="view" id="view-miners">
     <div class="card">
-      <h2>Miner leaderboard</h2>
-      <div class="sub">ranked by sustained compute contribution</div>
-      <table><thead><tr><th>Miner</th><th style="text-align:right">Compute</th><th style="text-align:right">Share</th><th>Contribution</th><th style="text-align:right">Reward · BENTHIC</th><th>State</th></tr></thead><tbody id="lbBody"></tbody></table>
-    </div>
-    <div class="grid row12" style="margin-top:20px">
-      <div class="card">
-        <h2>Utilization history · 30 epochs</h2>
-        <div class="sub">network-wide compute utilization per epoch</div>
-        <div class="hist" id="hist"></div>
-        <div class="legend"><span><i class="sw" style="background:var(--o)"></i>high</span><span><i class="sw" style="background:var(--o3)"></i>mid</span><span><i class="sw" style="background:rgba(255,255,255,.14)"></i>low</span></div>
-      </div>
-      <div class="card">
-        <h2>Phase profile</h2>
-        <div class="sub">how the network behaves in each growth phase</div>
-        <table><thead><tr><th>Phase</th><th style="text-align:right">Util.</th><th style="text-align:right">Reward*</th><th style="text-align:right">Share</th><th style="text-align:right">Avg dur.</th></tr></thead><tbody id="phaseBody"></tbody></table>
-        <div class="note">*reward = BENTHIC per TFLOP·hour. Emission tapers as utilization saturates.</div>
-      </div>
+      <h2>Miner leaderboard <span class="pending">awaiting launch</span></h2>
+      <div class="sub">ranked by sustained, verified compute contribution — populates at launch</div>
+      <table>
+        <thead><tr><th>Miner</th><th style="text-align:right">Compute</th><th style="text-align:right">Share</th><th style="text-align:right">Reward</th><th>State</th></tr></thead>
+        <tbody>
+          <tr><td><div class="skeleton" style="width:120px"></div></td><td><div class="skeleton" style="width:60px;margin-left:auto"></div></td><td><div class="skeleton" style="width:40px;margin-left:auto"></div></td><td><div class="skeleton" style="width:50px;margin-left:auto"></div></td><td><span class="pending">pending</span></td></tr>
+          <tr><td><div class="skeleton" style="width:140px"></div></td><td><div class="skeleton" style="width:60px;margin-left:auto"></div></td><td><div class="skeleton" style="width:40px;margin-left:auto"></div></td><td><div class="skeleton" style="width:50px;margin-left:auto"></div></td><td><span class="pending">pending</span></td></tr>
+          <tr><td><div class="skeleton" style="width:100px"></div></td><td><div class="skeleton" style="width:60px;margin-left:auto"></div></td><td><div class="skeleton" style="width:40px;margin-left:auto"></div></td><td><div class="skeleton" style="width:50px;margin-left:auto"></div></td><td><span class="pending">pending</span></td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -222,212 +163,35 @@
   <section class="view" id="view-token">
     <div class="grid row12">
       <div class="card">
-        <h2>$BENTHIC · latest epoch</h2>
-        <div class="sub">on-chain state for the most recent settled epoch</div>
-        <div id="tokenReport"></div>
-        <div class="prog"><i id="mineProg"></i></div>
-        <div class="note" id="mineNote"></div>
-        <div class="note">Emission &amp; rewards are computed from network telemetry. The settlement contract on <strong>Robinhood Chain</strong> is <strong>not yet deployed</strong> — figures are preview/testnet.</div>
+        <h2>$BENTHIC on-chain <span class="pending">awaiting launch</span></h2>
+        <div class="sub">live figures publish once the settlement contract deploys</div>
+        <div class="kv"><span class="k">Circulating supply</span><span class="v" style="color:var(--faint)">—</span></div>
+        <div class="kv"><span class="k">Mined to date</span><span class="v" style="color:var(--faint)">—</span></div>
+        <div class="kv"><span class="k">Emitted · epoch</span><span class="v" style="color:var(--faint)">—</span></div>
+        <div class="kv"><span class="k">Next halving</span><span class="v" style="color:var(--faint)">—</span></div>
       </div>
       <div class="card">
         <h2>Protocol parameters</h2>
-        <div class="sub">design · preview</div>
-        <div id="params"></div>
+        <div class="sub">intended design · from the whitepaper</div>
+        <div class="kv"><span class="k">Settlement chain</span><span class="v">Robinhood Chain (L2)</span></div>
+        <div class="kv"><span class="k">Contract</span><span class="v" style="color:var(--warn)">not deployed</span></div>
+        <div class="kv"><span class="k">Mining epoch</span><span class="v">1 h</span></div>
+        <div class="kv"><span class="k">Work</span><span class="v" style="color:var(--o2)">Proof of Useful Compute</span></div>
+        <div class="kv"><span class="k">Pool fee</span><span class="v">1.5%</span></div>
       </div>
     </div>
-
     <div class="card" style="margin-top:20px">
-      <h2>Recent epochs</h2>
-      <div class="sub">settled mining epochs (1 h each)</div>
-      <table><thead><tr><th>Epoch</th><th>Phase</th><th style="text-align:right">Compute</th><th style="text-align:right">Miners</th><th style="text-align:right">Mined</th><th>Status</th></tr></thead><tbody id="feedBody"></tbody></table>
-    </div>
-
-    <div class="card" style="margin-top:20px">
-      <h2>Mining pipeline</h2>
-      <div class="sub">how idle AI compute becomes settled $BENTHIC</div>
-      <div class="flow">
-        <div class="fnode"><div class="l">Dive · off-chain</div><div class="t">miner runs AI job</div><div class="t">GPU / accelerator</div></div>
-        <div class="farrow">→</div>
-        <div class="fnode"><div class="l">Verify</div><div class="t">redundant re-compute</div><div class="t mono">{job, output, proof}</div></div>
-        <div class="farrow">→</div>
-        <div class="fnode"><div class="l">Settle · Robinhood Chain</div><div class="t mono">BenthicPool.sol</div><div class="t">reward · finalize</div></div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:20px">
-      <h2>System architecture</h2>
-      <div class="sub">how work is measured, verified and rewarded</div>
-      <svg viewBox="0 0 680 100" style="width:100%;height:auto;display:block" font-family="Inter,sans-serif">
-        <defs><marker id="ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#69707f"/></marker>
-          <linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>
-        <g fill="none" stroke="#69707f" stroke-width="1.3" marker-end="url(#ar)"><path d="M150 50 L176 50"/><path d="M324 50 L350 50"/><path d="M498 50 L524 50"/></g>
-        <rect x="12" y="26" width="138" height="48" rx="12" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
-        <text x="81" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Miners</text>
-        <text x="81" y="61" text-anchor="middle" font-size="9.5" fill="#95a0b3">GPU · AI compute</text>
-        <rect x="178" y="26" width="146" height="48" rx="12" fill="#0e121b" stroke="#f65e06" stroke-width="1.4"/>
-        <text x="251" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Verifier mesh</text>
-        <text x="251" y="61" text-anchor="middle" font-size="9.5" fill="#95a0b3">redundant · challenge</text>
-        <rect x="352" y="26" width="146" height="48" rx="12" fill="rgba(246,94,6,.09)" stroke="url(#hl)" stroke-width="1.6"/>
-        <text x="425" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#ffb27a">BenthicPool</text>
-        <text x="425" y="61" text-anchor="middle" font-size="9.5" fill="#c88a5f">rewards · epochs</text>
-        <rect x="526" y="26" width="142" height="48" rx="12" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
-        <text x="597" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Robinhood Chain</text>
-        <text x="597" y="61" text-anchor="middle" font-size="9.5" fill="#95a0b3">settlement · L2</text>
-      </svg>
+      <h2>Recent epochs <span class="pending">awaiting launch</span></h2>
+      <div class="sub">settled mining epochs will list here once the network is live</div>
+      <div class="plot" style="height:120px">No epochs settled yet — mining begins at launch.</div>
     </div>
   </section>
 
-  <div class="foot" id="foot">Loading network telemetry…</div>
+  <div class="foot">Benthic is <strong>pre-launch</strong>. This dashboard shows no simulated data;
+    live telemetry populates once the network goes live on Robinhood Chain. Not financial advice.</div>
 </div>
 
 <script>
-function el(id){return document.getElementById(id);}
-var PHASES=[['bootstrap','Bootstrap'],['expansion','Expansion'],['steady','Steady']];
-
-function render(d){
-  el('asof').textContent='epoch '+d.as_of+' · '+d.window_days+'-epoch window';
-  el('foot').innerHTML='Preview telemetry for the <strong>Benthic</strong> compute network as of <strong>'+d.as_of+
-    '</strong>. Proof-of-Useful-Compute mining; settlement on Robinhood Chain is not yet live. Not financial advice.';
-
-  // ring gauge
-  var C=2*Math.PI*82, v=d.compute_index;
-  el('ringArc').setAttribute('stroke-dasharray',(C*v/100).toFixed(1)+' 999');
-  el('ringVal').textContent=v;
-  el('ringSub').textContent = v>=68?'high utilization': v>=48?'healthy utilization':'ramping';
-  el('phaseTag').textContent='Phase · '+d.phase;
-
-  // tiles
-  var nk=d.network;
-  var tiles=[
-    ['Active miners', nk.active_miners.toLocaleString(), '', ''],
-    ['Network compute', (nk.tflops/1000).toFixed(1), ' PFLOPs', ''],
-    ['Mined · epoch', (nk.mined_epoch/1000).toFixed(1)+'k', ' BENTHIC', ''],
-    ['Reward / TFLOP·h', nk.reward_per_tflop.toFixed(2), ' BENTHIC', '']
-  ];
-  el('tiles').innerHTML=tiles.map(function(t){
-    return '<div class="tile"><div class="lbl">'+t[0]+'</div><div class="val">'+t[1]+'<small>'+t[2]+'</small></div></div>';
-  }).join('');
-
-  // drivers
-  el('drivers').innerHTML=d.drivers.map(function(x){
-    var c=x.tone==='good'?'up':x.tone==='bad'?'down':'neu';
-    return '<div class="drv"><span class="k">'+x.k+'</span><span class="v '+c+'">'+x.v+'<span class="n">'+x.note+'</span></span></div>';
-  }).join('');
-
-  // chart
-  buildChart(d.compute_chart);
-  el('chartSub').textContent='normalized compute index · '+d.window_days+' epochs · solid = compute · dashed = BENTHIC price';
-
-  // donut (pool distribution)
-  buildDonut(d.pool_dist);
-
-  // top miners bars
-  var lb=d.leaderboard.slice(0,6), maxs=Math.max.apply(null,lb.map(function(m){return m.share;}))||1;
-  el('topMiners').innerHTML=lb.map(function(m){
-    var w=Math.round(m.share/maxs*100);
-    return '<div style="margin:12px 0">'+
-      '<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px">'+
-        '<span class="mono" style="color:var(--ink)">'+m.miner+'</span>'+
-        '<span class="mono" style="color:var(--muted)">'+(m.share*100).toFixed(1)+'%</span></div>'+
-      '<div style="height:9px;border-radius:6px;background:rgba(255,255,255,.05)"><span class="bar-h" style="width:'+w+'%"></span></div></div>';
-  }).join('');
-
-  // leaderboard
-  var maxt=Math.max.apply(null,d.leaderboard.map(function(m){return m.tflops;}))||1;
-  el('lbBody').innerHTML=d.leaderboard.map(function(m){
-    var w=Math.round(m.tflops/maxt*120);
-    return '<tr><td class="mono">'+m.miner+'</td><td class="n">'+m.tflops.toLocaleString()+'</td>'+
-      '<td class="n">'+(m.share*100).toFixed(1)+'%</td>'+
-      '<td><span class="bar-h" style="width:'+w+'px"></span></td>'+
-      '<td class="n">'+m.reward+'</td>'+
-      '<td><span class="stat '+(m.status==='online'?'on':'idle')+'"><span class="d"></span>'+m.status+'</span></td></tr>';
-  }).join('');
-
-  // utilization history
-  var hm={h:'var(--o)',m:'var(--o3)',l:'rgba(255,255,255,.12)'};
-  el('hist').innerHTML=d.history.map(function(c){return '<i style="background:'+hm[c]+'"></i>';}).join('');
-
-  // phase profile
-  el('phaseBody').innerHTML=PHASES.map(function(p){
-    var s=d.phase_stats[p[1]], cur=(d.phase===p[1]);
-    return '<tr'+(cur?' class="cur"':'')+'><td style="font-weight:600;color:'+(cur?'var(--o2)':'var(--ink)')+'">'+p[1]+(cur?' ◄':'')+'</td>'+
-      '<td class="n">'+(s.util*100).toFixed(0)+'%</td><td class="n">'+s.reward.toFixed(2)+'</td>'+
-      '<td class="n">'+s.share+'%</td><td class="n">'+s.dur+' ep</td></tr>';
-  }).join('');
-
-  // token report
-  var tk=d.token;
-  el('tokenReport').innerHTML=
-    kv('Symbol','<span style="color:var(--o2)">$'+tk.symbol+'</span>')+
-    kv('Max supply',tk.max_supply)+kv('Circulating',tk.circulating)+
-    kv('Emitted · epoch',tk.emission_epoch+' BENTHIC')+kv('Next halving',tk.next_halving);
-  el('mineProg').style.width=tk.mined_pct+'%';
-  el('mineNote').innerHTML='<strong>'+tk.mined_pct+'%</strong> of max supply mined';
-
-  // params
-  var pr=d.params;
-  el('params').innerHTML=
-    kv('Settlement chain',pr.chain)+kv('Contract',pr.contract)+kv('Mining epoch',pr.epoch)+
-    kv('Work','<span style="color:var(--o2)">'+pr.work+'</span>')+kv('Verification',pr.verification)+kv('Pool fee',pr.pool_fee);
-
-  // feed
-  el('feedBody').innerHTML=d.feed.map(function(f,i){
-    return '<tr'+(i===0?' class="cur"':'')+'><td class="mono">'+f.epoch+'</td><td>'+f.phase+'</td>'+
-      '<td class="n">'+f.compute+'</td><td class="n">'+f.miners.toLocaleString()+'</td>'+
-      '<td class="n">'+f.mined+'</td><td><span class="stat on"><span class="d"></span>'+f.status+'</span></td></tr>';
-  }).join('');
-}
-function kv(k,v){return '<div class="kv"><span class="k">'+k+'</span><span class="v">'+v+'</span></div>';}
-
-function buildChart(c){
-  var n=c.compute.length, x0=44,x1=706,y0=18,y1=214,pw=x1-x0,ph=y1-y0;
-  function X(i){return x0+(n<=1?0:i/(n-1)*pw);}
-  function Y(v){return y1 - v/100*ph;}
-  var s='<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1">'+
-    '<stop offset="0" stop-color="#f65e06" stop-opacity="0.42"/><stop offset="1" stop-color="#f65e06" stop-opacity="0"/></linearGradient>'+
-    '<linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>';
-  // gridlines
-  [0,25,50,75,100].forEach(function(t){
-    s+='<line x1="'+x0+'" y1="'+Y(t).toFixed(1)+'" x2="'+x1+'" y2="'+Y(t).toFixed(1)+'" stroke="rgba(255,255,255,.05)"/>'+
-       '<text x="'+(x0-8)+'" y="'+(Y(t)+3).toFixed(0)+'" text-anchor="end" font-size="9.5" fill="#69707f">'+t+'</text>';});
-  var mn=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  [0,Math.floor(n*0.25),Math.floor(n*0.5),Math.floor(n*0.75),n-1].forEach(function(t){
-    var dt=c.dates[t]||''; var lbl=dt?mn[parseInt(dt.slice(5,7),10)-1]+' '+dt.slice(8,10):'';
-    s+='<text x="'+X(t).toFixed(0)+'" y="232" text-anchor="middle" font-size="9.5" fill="#69707f">'+lbl+'</text>';});
-  // area + line
-  var line=''; for(var k=0;k<n;k++) line+=(k?'L':'M')+X(k).toFixed(1)+' '+Y(c.compute[k]).toFixed(1)+' ';
-  s+='<path d="'+line+'L'+X(n-1).toFixed(1)+' '+y1+' L'+X(0).toFixed(1)+' '+y1+' Z" fill="url(#area)"/>';
-  s+='<path d="'+line+'" fill="none" stroke="url(#ln)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>';
-  // price dashed (scaled to its own range)
-  var pmin=Math.min.apply(null,c.price),pmax=Math.max.apply(null,c.price),pr='';
-  for(var j=0;j<n;j++){var yv=(c.price[j]-pmin)/((pmax-pmin)||1)*100; pr+=(j?'L':'M')+X(j).toFixed(1)+' '+Y(yv).toFixed(1)+' ';}
-  s+='<path d="'+pr+'" fill="none" stroke="#ffd7b0" stroke-width="1.4" opacity="0.5" stroke-dasharray="3 5"/>';
-  // end marker
-  var lx=X(n-1),ly=Y(c.compute[n-1]);
-  s+='<circle cx="'+lx.toFixed(1)+'" cy="'+ly.toFixed(1)+'" r="4.5" fill="#0c0f16" stroke="#ff8a3d" stroke-width="2.2"/>';
-  s+='<text x="'+lx.toFixed(1)+'" y="'+(ly-11).toFixed(1)+'" text-anchor="end" font-size="11" font-weight="600" fill="#ffb27a" font-family="Space Grotesk">'+c.compute[n-1]+'</text>';
-  el('chart').innerHTML=s;
-}
-
-function buildDonut(pools){
-  var cx=80,cy=80,r=58,sw=20,C=2*Math.PI*r,off=0,g='';
-  pools.forEach(function(p){
-    var len=C*p.share, gap=2;
-    g+='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+p.color+'" stroke-width="'+sw+'" '+
-       'stroke-dasharray="'+Math.max(0,len-gap).toFixed(1)+' '+(C-Math.max(0,len-gap)).toFixed(1)+'" '+
-       'stroke-dashoffset="'+(-off).toFixed(1)+'" transform="rotate(-90 '+cx+' '+cy+')" stroke-linecap="round"/>';
-    off+=len;
-  });
-  el('donut').innerHTML=g;
-  el('donutC').textContent=pools.length;
-  el('poolLegend').innerHTML=pools.map(function(p){
-    return '<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;font-size:13px">'+
-      '<span style="display:inline-flex;align-items:center;gap:9px"><i class="sw" style="background:'+p.color+'"></i>'+p.label+'</span>'+
-      '<span class="mono" style="color:var(--muted)">'+(p.share*100).toFixed(0)+'%</span></div>';
-  }).join('');
-}
-
-// tabs
 function showTab(id){
   if(['network','miners','token'].indexOf(id)<0) id='network';
   document.querySelectorAll('.view').forEach(function(v){v.classList.toggle('active', v.id==='view-'+id);});
@@ -437,17 +201,6 @@ function showTab(id){
 document.querySelectorAll('.tabs a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var id=a.getAttribute('data-tab');history.replaceState(null,'','#'+id);showTab(id);});});
 window.addEventListener('hashchange',function(){showTab((location.hash||'#network').replace('#',''));});
 showTab((location.hash||'#network').replace('#',''));
-
-function load(){
-  fetch('data.json?'+Date.now()).then(function(r){return r.json();}).then(function(d){
-    render(d);
-    var t=new Date(),p=function(n){return String(n).padStart(2,'0');};
-    el('refreshed').textContent='· synced '+p(t.getUTCHours())+':'+p(t.getUTCMinutes())+' UTC';
-  }).catch(function(e){ el('foot').textContent='Failed to load data.json ('+e+')'; });
-}
-load();
-setInterval(load,45000);
-document.addEventListener('visibilitychange',function(){if(!document.hidden) load();});
 </script>
 </body>
 </html>
