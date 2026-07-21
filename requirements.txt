@@ -1,0 +1,3 @@
+# Runtime: the engine + server use only the Python standard library.
+# Development / CI dependencies:
+pytest>=7.4
