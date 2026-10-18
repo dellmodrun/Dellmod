@@ -16,6 +16,7 @@
   <a href="https://nuttumrunit.github.io/Dellmod/"><img alt="site" src="https://img.shields.io/badge/site-Dellmod-16fc34?logo=googlechrome&logoColor=white"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-3ecf8e?logo=python&logoColor=white">
   <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-16fc34"></a>
+  <a href="https://x.com/dellmodrun"><img alt="X" src="https://img.shields.io/badge/X-%40dellmodrun-111?logo=x&logoColor=white"></a>
 </p>
 
 ---
