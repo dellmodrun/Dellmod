@@ -140,47 +140,6 @@
     .main{padding:22px 12px 80px}
     .card{padding:34px 22px;border-radius:18px}
   }
-  /* Pixel terminal skin — presentation only; document structure stays unchanged. */
-  body{
-    background-color:#050807;
-    background-image:
-      linear-gradient(rgba(22,252,52,.025) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(22,252,52,.025) 1px,transparent 1px);
-    background-size:16px 16px;
-  }
-  .card{
-    background:#101512;
-    border-color:#2a3730;
-    border-radius:0;
-    box-shadow:7px 7px 0 #030504,8px 8px 0 rgba(22,252,52,.16);
-  }
-  .card::before{
-    height:3px;
-    background:repeating-linear-gradient(90deg,var(--o) 0 12px,transparent 12px 18px);
-    opacity:.58;
-  }
-  .brand .mark,.emblem img{image-rendering:pixelated}
-  .brand .word,.doc-title{letter-spacing:-.02em;text-shadow:2px 2px 0 rgba(22,252,52,.1)}
-  .doc-title .hl{background:none;color:var(--o);-webkit-text-fill-color:var(--o)}
-  .nav-label{font-family:"JetBrains Mono",monospace;color:#6f8077}
-  .nav-group a{font-family:"JetBrains Mono",monospace}
-  .toc a.active{position:relative;padding-left:11px}
-  .toc a.active::before{content:"■";position:absolute;left:0;font-size:7px;color:var(--o)}
-  .contract-strip,.contract-strip .state,.abstract,.figure .frame,.callout,.flow-node,
-  pre,code,.algo{border-radius:0}
-  .contract-strip{background:#0a130d;box-shadow:3px 3px 0 rgba(22,252,52,.12)}
-  .contract-strip .state{box-shadow:2px 2px 0 #071109}
-  .abstract{background:#0d120f;border-color:#27332d;box-shadow:4px 4px 0 #070a08}
-  .figure .frame,.flow-node,pre,.algo{background:#0a0f0c}
-  .callout{background:#0b130e;border-left:3px solid var(--o);box-shadow:4px 4px 0 #050806}
-  .algo .algo-title{background:#111914}
-  code{border:1px solid #28342e;padding:1px 5px}
-  table{border-collapse:collapse;border:1px solid #2a3730}
-  th,td{border-right:1px solid #202b25}
-  th:last-child,td:last-child{border-right:0}
-  .social a{width:22px;height:22px;align-items:center;justify-content:center;border:1px solid transparent}
-  .social a:hover{border-color:var(--o);background:#0b160e;text-decoration:none}
-  @media (max-width:1040px){.card{border-radius:0}}
 </style>
 </head>
 <body>
