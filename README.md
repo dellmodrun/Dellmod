@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/dellmod-logo.jpg" alt="Dellmod" height="120" />
+  <img src="assets/dellmod-logo-transparent.png" alt="Dellmod" height="120" />
 </p>
 
 <h1 align="center">Dellmod</h1>
