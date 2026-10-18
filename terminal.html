@@ -138,6 +138,36 @@
 
   .note{font-size:11.5px;color:var(--faint);margin-top:12px;line-height:1.6}
   .foot{margin-top:26px;font-size:12px;color:var(--faint);text-align:center;line-height:1.7}
+  /* Pixel terminal skin — presentation only; telemetry and behavior stay unchanged. */
+  body{
+    background-color:#050807;
+    background-image:
+      linear-gradient(rgba(22,252,52,.025) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(22,252,52,.025) 1px,transparent 1px);
+    background-size:16px 16px;
+  }
+  .topbar{background:#070b09;backdrop-filter:none;border-bottom-color:#2a3730;box-shadow:0 3px 0 #030504}
+  .topbar img{image-rendering:pixelated}
+  .badge,.notice,.tabs a,.card,.tile,.phase-tag,.pill,.pill .bar,.pill .bar>i,
+  .bar-h,.sw,.hist i,.prog,.prog>i,.fnode{border-radius:0}
+  .badge{box-shadow:2px 2px 0 rgba(245,181,68,.13)}
+  .badge .dot,.stat .d{border-radius:0;box-shadow:none;animation:pulse 1.9s steps(2,end) infinite}
+  .notice{background:#11120d;border-left:3px solid var(--warn);box-shadow:4px 4px 0 #050604}
+  .tabs{gap:0}
+  .tabs a{font-family:"JetBrains Mono",monospace;border:1px solid #202b25;border-right:0;background:#080d0a}
+  .tabs a:last-child{border-right:1px solid #202b25}
+  .tabs a:hover{background:#0d1510}
+  .tabs a.active{background:#0b170f;border-color:#28713c;box-shadow:inset 0 -3px 0 var(--o)}
+  .card{background:#101512;border-color:#2a3730;box-shadow:5px 5px 0 #030504,6px 6px 0 rgba(22,252,52,.1)}
+  .card::before{height:3px;background:repeating-linear-gradient(90deg,var(--o) 0 12px,transparent 12px 18px);opacity:.38}
+  .tile,.pill,.fnode{background:#090e0b;border-color:#253029}
+  .pill.cur{background:#0b150e;box-shadow:inset 3px 0 0 var(--o)}
+  .phase-tag{font-family:"JetBrains Mono",monospace;background:#09170d;box-shadow:3px 3px 0 #050806}
+  .pill .bar,.prog{background:#050806;border:1px solid #26322b;height:8px}
+  .pill .bar>i,.prog>i,.bar-h{background:var(--o)}
+  .hist{gap:3px}.hist i{width:13px}
+  .legend .sw{width:10px;height:10px}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
 </style>
 </head>
 <body>
