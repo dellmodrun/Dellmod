@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Benthic Whitepaper</title>
-<meta name="description" content="Benthic — Proof-of-Useful-Compute mining for AI, settled on Robinhood Chain." />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+<title>Dellmod Whitepaper</title>
+<meta name="description" content="Dellmod — Proof-of-Useful-Compute mining for AI, settled on Solana." />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/dellmod-logo.jpg" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/dellmod-logo.jpg" />
 <link rel="shortcut icon" href="assets/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,21 +18,21 @@
     --card:#12161f; --card2:#161b26; --panel:#0e121b;
     --line:rgba(255,255,255,.07); --line2:rgba(255,255,255,.045);
     --ink:#d9dde6; --head:#f6f7fa; --muted:#95a0b3; --faint:#69707f;
-    --o:#f65e06; --o2:#ff8a3d; --o3:#ffb27a;
-    --up:#3ecf8e; --warn:#f5b544; --link:#ff8a3d;
+    --o:#16fc34; --o2:#42ff7b; --o3:#9effbd;
+    --up:#3ecf8e; --warn:#f5b544; --link:#42ff7b;
     --content:720px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;color:var(--ink);font-family:"Inter",system-ui,sans-serif;font-size:16px;line-height:1.68;-webkit-font-smoothing:antialiased;
     background:
-      radial-gradient(1000px 560px at 82% -6%, rgba(246,94,6,.12), transparent 60%),
-      radial-gradient(720px 520px at 4% 2%, rgba(255,138,61,.05), transparent 55%),
+      radial-gradient(1000px 560px at 82% -6%, rgba(22,252,52,.12), transparent 60%),
+      radial-gradient(720px 520px at 4% 2%, rgba(22,252,52,.05), transparent 55%),
       linear-gradient(180deg,var(--bg2),var(--bg));
     background-attachment:fixed}
   a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
-  ::selection{background:rgba(246,94,6,.85);color:#0b0b0b}
+  ::selection{background:rgba(22,252,52,.85);color:#0b0b0b}
   h1,h2,h3,h4,.disp,.doc-title,.word{font-family:"Space Grotesk","Inter",sans-serif}
   .mono{font-family:"JetBrains Mono",monospace}
 
@@ -64,7 +64,7 @@
   .byline a{color:var(--muted)}
   .docdate{text-align:center;color:var(--faint);font-size:13px;margin-bottom:20px}
   .chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
-  .chip{font-size:11.5px;letter-spacing:.03em;color:var(--o2);background:rgba(246,94,6,.09);border:1px solid rgba(246,94,6,.3);border-radius:999px;padding:4px 12px}
+  .chip{font-size:11.5px;letter-spacing:.03em;color:var(--o2);background:rgba(22,252,52,.09);border:1px solid rgba(22,252,52,.3);border-radius:999px;padding:4px 12px}
 
   .abstract{font-size:16px;margin:0 auto 22px;max-width:660px;color:var(--ink)}
   .abstract .ab-label{font-weight:600;color:var(--head)}
@@ -105,13 +105,13 @@
   .figure .frame{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
   .figcaption{font-size:13px;color:var(--muted);margin-top:12px;text-align:left;line-height:1.55}
 
-  .callout{border:1px solid rgba(246,94,6,.28);background:linear-gradient(180deg,rgba(246,94,6,.09),transparent);
+  .callout{border:1px solid rgba(22,252,52,.28);background:linear-gradient(180deg,rgba(22,252,52,.09),transparent);
     border-radius:16px;padding:16px 20px;margin:22px 0;font-size:16px}
   .callout strong{color:var(--o2)}
 
   .flow{display:flex;align-items:stretch;gap:12px;margin:24px 0}
   .flow-node{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 17px;min-width:0}
-  .flow-node.hl{border-color:rgba(246,94,6,.5);background:linear-gradient(180deg,rgba(246,94,6,.1),var(--panel))}
+  .flow-node.hl{border-color:rgba(22,252,52,.5);background:linear-gradient(180deg,rgba(22,252,52,.1),var(--panel))}
   .flow-node .lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--o2);margin-bottom:9px;font-weight:600}
   .flow-node .ln{font-size:13px;color:var(--ink);line-height:1.7}
   .flow-node .ln.mono{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted);word-break:break-word}
@@ -136,57 +136,57 @@
 <div class="layout">
 <aside class="sidebar">
   <div class="brand">
-    <img class="mark" src="assets/logo.png" alt="Benthic logo" />
-    <span class="word">Benthic</span>
+    <img class="mark" src="assets/dellmod-logo.jpg" alt="Dellmod logo" />
+    <span class="word">Dellmod</span>
   </div>
 
   <div class="nav-group">
     <div class="nav-label">Network</div>
-    <a href="terminal.html#network">Benthic Network<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
+    <a href="terminal.html#network">Dellmod Network<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
     <a href="terminal.html#miners">Miner Stats<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
-    <a href="terminal.html#token">$BENTHIC Token<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
+    <a href="terminal.html#token">$DELLMOD Token<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
   </div>
 
   <div class="nav-group toc">
     <div class="nav-label">Table of Contents</div>
     <a href="#intro" class="active">1. Introduction</a>
-    <a href="#seafloor">2. The Deep Compute Layer</a>
+    <a href="#architecture">2. The Modular Compute Layer</a>
     <a href="#pouc">3. Proof of Useful Compute</a>
-    <a href="#pool">4. The Trench · Mining Pool</a>
-    <a href="#settle">5. Robinhood Chain Settlement</a>
+    <a href="#pool">4. The Backplane · Mining Pool</a>
+    <a href="#settle">5. Solana Settlement</a>
     <a href="#token">6. Tokenomics</a>
     <a href="#arch">7. Architecture &amp; Roadmap</a>
     <a href="#security">8. Security</a>
-    <a href="#launch">9. $BENTHIC &amp; Fair Launch</a>
+    <a href="#launch">9. $DELLMOD &amp; Fair Launch</a>
     <a href="#disc">10. Disclaimers</a>
   </div>
 
   <div class="nav-group">
     <div class="nav-label">Links</div>
-    <a href="https://x.com/benthicdate" target="_blank" rel="noopener">Twitter<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
-    <a href="https://github.com/benthicdate/Benthic" target="_blank" rel="noopener">GitHub<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
-    <a href="https://ponsfamily.com/launchpad/0x038a2e2839d2be8b4e4180bc75e229224eca7a20" target="_blank" rel="noopener">Buy $BENTHIC<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
-    <a href="mailto:hello@benthic.one">Contact</a>
+    <a href="https://x.com/" target="_blank" rel="noopener">Twitter<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
+    <a href="https://github.com/nuttumrunit/Dellmod" target="_blank" rel="noopener">GitHub<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
+    <a href="https://pump.fun/" target="_blank" rel="noopener">Buy $DELLMOD<svg class="ext" viewBox="0 0 7 7" fill="currentColor"><path d="M0.39 6.62C0.2 6.43.19 6.17.38 5.98L4.67 1.68 5.33 1.08 3.18 1.15H1.89C1.65 1.15 1.44.95 1.44.71 1.44.46 1.62.25 1.91.25H6.27C6.57.25 6.76.45 6.76.73V5.1C6.76 5.37 6.54 5.57 6.3 5.57 6.05 5.57 5.85 5.35 5.85 5.12V3.8L5.94 1.64 5.31 2.33 1.02 6.62C.83 6.8.57 6.79.39 6.62Z"/></svg></a>
+    <a href="https://github.com/nuttumrunit/Dellmod/issues">Contact</a>
   </div>
 
   <div class="social">
-    <a href="https://x.com/benthicdate" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-    <a href="https://github.com/benthicdate/Benthic" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg></a>
-    <a href="https://x.com/intent/post?text=Benthic%20%E2%80%94%20Proof-of-Useful-Compute%20mining%20on%20Robinhood%20Chain&amp;url=https%3A%2F%2Fbenthic.one" target="_blank" rel="noopener" aria-label="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></a>
-    <a href="mailto:hello@benthic.one" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+    <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://github.com/nuttumrunit/Dellmod" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg></a>
+    <a href="https://x.com/intent/post?text=Dellmod%20%E2%80%94%20Proof-of-Useful-Compute%20on%20Solana&amp;url=https%3A%2F%2Fnuttumrunit.github.io%2FDellmod%2F" target="_blank" rel="noopener" aria-label="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></a>
+    <a href="https://github.com/nuttumrunit/Dellmod/issues" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
   </div>
 </aside>
 
 <main class="main">
 <article class="card">
-  <h1 class="doc-title"><span class="hl">Benthic</span> Whitepaper</h1>
-  <div class="subtitle">Proof-of-Useful-Compute mining for AI, settled on Robinhood Chain</div>
-  <div class="byline">Benthic Labs &middot; <a href="https://benthic.one/" target="_blank" rel="noopener">benthic.one</a> &middot; <a href="mailto:hello@benthic.one">hello@benthic.one</a></div>
+  <h1 class="doc-title"><span class="hl">Dellmod</span> Whitepaper</h1>
+  <div class="subtitle">Proof-of-Useful-Compute mining for AI, settled on Solana</div>
+  <div class="byline">Dellmod Labs &middot; <a href="https://nuttumrunit.github.io/Dellmod/" target="_blank" rel="noopener">nuttumrunit.github.io/Dellmod</a> &middot; <a href="https://github.com/nuttumrunit/Dellmod/issues">GitHub Issues</a></div>
   <div class="docdate">Draft v0.1 — July 2026</div>
   <div class="chips">
     <span class="chip">Proof of Useful Compute</span>
     <span class="chip">AI mining</span>
-    <span class="chip">Robinhood Chain</span>
+    <span class="chip">Solana</span>
     <span class="chip">Fair launch</span>
   </div>
 
@@ -194,22 +194,21 @@
     <p><span class="ab-label">Abstract. </span>
     The world is full of idle accelerators and hungry AI workloads, yet the two rarely meet in a
     market that pays fairly for real work. Classical crypto mining burns electricity on hashes that
-    secure a ledger but produce nothing else; proof-of-stake pays capital for holding capital. Benthic
+    secure a ledger but produce nothing else; proof-of-stake pays capital for holding capital. Dellmod
     proposes a third path: <em>proof of useful compute</em> — a network in which miners earn the
-    native token <strong>$BENTHIC</strong> by contributing verifiable AI computation (inference and
+    native token <strong>$DELLMOD</strong> by contributing verifiable AI computation (inference and
     training jobs) rather than wasted hashpower. Work is metered in verified TFLOP-hours, checked by a
-    redundant verifier mesh, pooled in an open mining pool we call the <em>Trench</em>, and settled on
-    <strong>Robinhood Chain</strong>. The token launches first as a fair, community-owned coin; the
+    redundant verifier mesh, pooled in an open mining pool we call the <em>Backplane</em>, and settled on
+    <strong>Solana</strong>. The token launches first as a fair, community-owned coin; the
     compute mining network is then built on top of it, turning holders into an economy that pays for
     real machine work. This paper specifies the mining mechanism, the reward and emission model, the
-    verification game, and the settlement path. Like the benthic zone of the ocean — the deep floor
-    where everything eventually settles — the protocol is where scattered, idle compute settles into
-    value.</p>
+    verification game, and the settlement path. Like a modular compute backplane, Dellmod turns
+    scattered accelerators into coordinated, verifiable capacity that settles into value.</p>
   </div>
   <div class="keywords"><strong>Keywords:</strong> proof of useful work, AI compute, decentralized
-    mining, verifiable computation, token emission, mining pools, Robinhood Chain, fair launch.</div>
+    mining, verifiable computation, token emission, mining pools, Solana, fair launch.</div>
 
-  <span class="emblem"><img src="assets/logo.png" alt="" /></span>
+  <span class="emblem"><img src="assets/dellmod-logo.jpg" alt="" /></span>
 
   <!-- 1 -->
   <h2 id="intro"><span class="no">1</span>Introduction</h2>
@@ -221,8 +220,8 @@
     economies that could coordinate it are busy paying for work that produces nothing.
   </p>
   <p>
-    Benthic exists to close that gap. Instead of rewarding miners for guessing hashes (proof of work)
-    or for locking up coins (proof of stake), Benthic rewards them for performing <em>useful
+    Dellmod exists to close that gap. Instead of rewarding miners for guessing hashes (proof of work)
+    or for locking up coins (proof of stake), Dellmod rewards them for performing <em>useful
     computation</em> the network actually needs — AI inference and training jobs — and proves that
     the work was done correctly before paying for it. We call this <strong>Proof of Useful Compute
     (PoUC)</strong>.
@@ -231,57 +230,55 @@
   <h3>1.1 Why now, and why a token first</h3>
   <p>
     A compute network is only as valuable as the demand flowing through it, and demand follows
-    liquidity and attention. Benthic therefore launches in the opposite order from a typical
-    infrastructure project: the <strong>$BENTHIC token launches first</strong>, as a fair, community-owned
-    coin at <a href="https://ponsfamily.com/launchpad/0x038a2e2839d2be8b4e4180bc75e229224eca7a20" target="_blank" rel="noopener">ponsfamily.com</a>, seeding
+    liquidity and attention. Dellmod therefore launches in the opposite order from a typical
+    infrastructure project: the <strong>$DELLMOD token launches first</strong>, as a fair, community-owned
+    coin at <a href="https://pump.fun/" target="_blank" rel="noopener">Pump.fun</a>, seeding
     an aligned community and a liquid unit of account. The mining network — the pool, the verifier
-    mesh, the settlement contracts — is then built <em>on top of that token</em>, so that the people
+    mesh, the settlement programs — is then built <em>on top of that token</em>, so that the people
     who believed early become the miners, verifiers and customers of the network they own.
   </p>
 
-  <h3>1.2 Why Robinhood Chain</h3>
+  <h3>1.2 Why Solana</h3>
   <p>
     Rewards must settle somewhere fast, cheap and close to real financial rails. We target
-    <strong>Robinhood Chain</strong> — an EVM-compatible Layer 2 built for tokenized, finance-native
-    assets — as the settlement layer for mining epochs. Compute proofs are verified off-chain; only
-    the compact, signed result of each epoch touches the chain, where rewards are minted and
-    distributed to the pool. This keeps the network cheap to operate while inheriting the security and
-    reach of an established L2.
+    <strong>Solana</strong> as the settlement layer for mining epochs. Its high-throughput runtime,
+    low transaction costs, and mature SPL tooling suit frequent reward settlement. Compute proofs
+    are verified off-chain; only the compact, signed result of each epoch is committed by the Dellmod
+    Solana program, where rewards are distributed through SPL token accounts. This keeps verification
+    practical while preserving an auditable on-chain settlement record.
   </p>
 
   <h3>1.3 Contributions</h3>
   <ul>
     <li>A fully specified <strong>Proof-of-Useful-Compute</strong> mining mechanism that meters AI work
-      in verified TFLOP-hours and prices it in $BENTHIC.</li>
+      in verified TFLOP-hours and prices it in $DELLMOD.</li>
     <li>A <strong>redundant verifier mesh</strong> with a challenge game that makes faking work
       unprofitable in expectation.</li>
-    <li>An open <strong>mining pool (the Trench)</strong> with a transparent, share-based reward split
+    <li>An open <strong>mining pool (the Backplane)</strong> with a transparent, share-based reward split
       and a halving emission schedule.</li>
     <li>A <strong>fair-launch token</strong> — no insider allocation, no pre-mine of the mining
       reward — that bootstraps the network it will later power.</li>
   </ul>
 
   <!-- 2 -->
-  <h2 id="seafloor"><span class="no">2</span>The Deep Compute Layer</h2>
+  <h2 id="architecture"><span class="no">2</span>The Modular Compute Layer</h2>
   <p>
-    In the ocean, the <em>benthic zone</em> is the floor — the layer where everything that drifts
-    through the water column eventually settles and is turned into something useful by the organisms
-    that live there. Benthic models compute the same way. Idle accelerators are drifting resources;
-    AI jobs are the nutrients; the protocol is the floor where the two settle into value. The system
-    decomposes into three layers.
+    Dellmod treats distributed compute as a modular electronic system. Idle accelerators are
+    independent components, AI jobs are incoming signals, and the protocol is the control plane that
+    routes, verifies, and settles useful work. The system decomposes into three coordinated layers.
   </p>
   <ul>
-    <li><strong>The current (demand).</strong> Streams of AI jobs — inference requests, fine-tuning
+    <li><strong>Input (demand).</strong> Streams of AI jobs — inference requests, fine-tuning
       and training batches — enter the network and are matched to available compute.</li>
-    <li><strong>The dive (work).</strong> A miner accepts a job, runs it on its hardware, and returns
-      the output together with a proof. One unit of accepted, verified work is a <em>dive</em>.</li>
-    <li><strong>The settle (reward).</strong> Verified dives are aggregated per epoch and paid out in
-      $BENTHIC according to each miner's share of useful compute.</li>
+    <li><strong>Execute (work).</strong> A miner accepts a job, runs it on its hardware, and returns
+      the output together with a proof. One accepted unit is a <em>verified execution</em>.</li>
+    <li><strong>Settle (reward).</strong> Verified executions are aggregated per epoch and paid out in
+      $DELLMOD according to each miner's share of useful compute.</li>
   </ul>
   <div class="callout">
-    In one line: <strong>demand drifts down as jobs, miners dive to do the work, and verified work
-    settles into $BENTHIC.</strong> Everything the protocol does is a variation on measuring and pricing
-    the dive.
+    In one line: <strong>demand enters as jobs, miners execute the work, and verified output settles
+    into $DELLMOD.</strong> Everything the protocol does is a variation on measuring and pricing the
+    execution.
   </div>
 
   <h3 id="notation">2.1 Notation</h3>
@@ -289,7 +286,7 @@
     Let the network contain <em>N</em> miners. In epoch <em>t</em>, miner <em>i</em> completes a set
     of jobs whose accepted, verified compute is <em>w<sub>i,t</sub></em>, measured in
     <strong>TFLOP-hours</strong> and scaled by a quality multiplier <em>q<sub>i,t</sub></em> ∈ (0, 1]
-    reflecting latency, correctness and uptime. The epoch emission is <em>E<sub>t</sub></em> $BENTHIC,
+    reflecting latency, correctness and uptime. The epoch emission is <em>E<sub>t</sub></em> $DELLMOD,
     the pool fee is <em>φ</em>, and the headline outputs are each miner's reward
     <em>ρ<sub>i,t</sub></em> and the network's aggregate compute <em>W<sub>t</sub></em> = Σ<sub>i</sub>
     <em>q<sub>i,t</sub> w<sub>i,t</sub></em>.
@@ -299,7 +296,7 @@
   <h2 id="pouc"><span class="no">3</span>Proof of Useful Compute</h2>
   <p>
     The core problem is old and hard: how do you pay someone for a computation without re-running it
-    yourself? Benthic does not claim a single silver bullet; it combines cheap statistical checks with
+    yourself? Dellmod does not claim a single silver bullet; it combines cheap statistical checks with
     an economic dispute game so that honest computation is the only strategy that pays. The pipeline
     from job to reward has four stages.
   </p>
@@ -309,7 +306,7 @@
       <svg viewBox="0 0 660 120" style="width:100%;height:auto;display:block" font-family="Inter,sans-serif">
         <defs>
           <marker id="fa" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#69707f"/></marker>
-          <linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
+          <linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16fc34"/><stop offset="1" stop-color="#42ff7b"/></linearGradient>
         </defs>
         <g fill="none" stroke="#69707f" stroke-width="1.3" marker-end="url(#fa)">
           <path d="M150 60 L176 60"/><path d="M324 60 L350 60"/><path d="M498 60 L524 60"/>
@@ -318,23 +315,23 @@
         <text x="81" y="57" text-anchor="middle" font-size="12.5" font-weight="600" fill="#f2f3f6">1 · Dispatch</text>
         <text x="81" y="73" text-anchor="middle" font-size="9.5" fill="#95a0b3">job → miner</text>
         <rect x="178" y="34" width="146" height="52" rx="13" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
-        <text x="251" y="57" text-anchor="middle" font-size="12.5" font-weight="600" fill="#f2f3f6">2 · Dive</text>
+        <text x="251" y="57" text-anchor="middle" font-size="12.5" font-weight="600" fill="#f2f3f6">2 · Execute</text>
         <text x="251" y="73" text-anchor="middle" font-size="9.5" fill="#95a0b3">run AI compute</text>
-        <rect x="352" y="34" width="146" height="52" rx="13" fill="rgba(246,94,6,.09)" stroke="url(#hl)" stroke-width="1.6"/>
-        <text x="425" y="57" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffb27a">3 · Verify</text>
-        <text x="425" y="73" text-anchor="middle" font-size="9.5" fill="#c88a5f">redundant + challenge</text>
+        <rect x="352" y="34" width="146" height="52" rx="13" fill="rgba(22,252,52,.09)" stroke="url(#hl)" stroke-width="1.6"/>
+        <text x="425" y="57" text-anchor="middle" font-size="12.5" font-weight="700" fill="#9effbd">3 · Verify</text>
+        <text x="425" y="73" text-anchor="middle" font-size="9.5" fill="#3bcc6f">redundant + challenge</text>
         <rect x="526" y="34" width="134" height="52" rx="13" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
         <text x="593" y="57" text-anchor="middle" font-size="12.5" font-weight="600" fill="#f2f3f6">4 · Settle</text>
-        <text x="593" y="73" text-anchor="middle" font-size="9.5" fill="#95a0b3">mint $BENTHIC</text>
+        <text x="593" y="73" text-anchor="middle" font-size="9.5" fill="#95a0b3">mint $DELLMOD</text>
       </svg>
     </div>
     <div class="figcaption">Figure 1. The PoUC pipeline. Jobs are dispatched to miners, executed,
-      verified by a redundant mesh with an economic challenge window, and settled as $BENTHIC each epoch.</div>
+      verified by a redundant mesh with an economic challenge window, and settled as $DELLMOD each epoch.</div>
   </div>
 
   <h3 id="metering">3.1 Metering work</h3>
   <p>
-    Raw FLOPs are easy to claim and hard to trust, so Benthic meters <em>accepted output</em>, not
+    Raw FLOPs are easy to claim and hard to trust, so Dellmod meters <em>accepted output</em>, not
     self-reported cycles. Each job has a known compute profile (model, input size, precision); a
     correctly returned result is credited its profiled TFLOP-hours, scaled by the miner's quality
     multiplier. A miner's effective work in an epoch is
@@ -375,7 +372,7 @@
   </p>
 
   <div class="algo">
-    <div class="algo-title">Algorithm 1 — Dive lifecycle (per job)</div>
+    <div class="algo-title">Algorithm 1 — Execution lifecycle (per job)</div>
     <pre>input : job j with profiled compute c_j, value v_j
 1  dispatch j to miner i  (and to a shadow miner w.p. s)
 2  i runs the model, returns output o_i and commitment h_i
@@ -403,10 +400,10 @@ output: verified work credited to miner i</pre>
   </p>
 
   <!-- 4 -->
-  <h2 id="pool"><span class="no">4</span>The Trench · Mining Pool</h2>
+  <h2 id="pool"><span class="no">4</span>The Backplane · Mining Pool</h2>
   <p>
     A single miner's income from a proportional scheme is lumpy — you only get paid when your work
-    lands in a settled epoch. The <strong>Trench</strong> is Benthic's open mining pool: miners
+    lands in a settled epoch. The <strong>Backplane</strong> is Dellmod's open mining pool: miners
     contribute compute continuously and receive smoothed rewards proportional to their sustained
     contribution, minus the pool fee <em>φ</em>. Multiple independent pools may coexist; the protocol
     treats them as first-class and reports their share of network compute (see the live
@@ -422,12 +419,12 @@ output: verified work credited to miner i</pre>
   </p>
 
   <!-- 5 -->
-  <h2 id="settle"><span class="no">5</span>Robinhood Chain Settlement</h2>
+  <h2 id="settle"><span class="no">5</span>Solana Settlement</h2>
   <p>
     Compute happens off-chain; trust must reach the chain without re-execution. Each epoch, the pool
     operator aggregates verified work into a signed report — a Merkle root over
     (miner, verified-work, reward) leaves plus the epoch's parameters — and submits it to the
-    settlement contract on Robinhood Chain.
+    settlement program on Solana.
   </p>
   <div class="flow">
     <div class="flow-node">
@@ -443,8 +440,8 @@ output: verified work credited to miner i</pre>
     </div>
     <div class="flow-arrow">&rarr;</div>
     <div class="flow-node hl">
-      <div class="lbl">On-chain · Robinhood Chain</div>
-      <div class="ln mono">BenthicPool.sol</div>
+      <div class="lbl">On-chain · Solana</div>
+      <div class="ln mono">Dellmod Pool Program</div>
       <div class="ln">mint · distribute · challenge</div>
     </div>
   </div>
@@ -457,7 +454,7 @@ output: verified work credited to miner i</pre>
   <table>
     <thead><tr><th>Parameter</th><th>Value (preview)</th></tr></thead>
     <tbody>
-      <tr><td>Settlement chain</td><td>Robinhood Chain (L2)</td></tr>
+      <tr><td>Settlement chain</td><td>Solana</td></tr>
       <tr><td>Mining epoch</td><td>1 hour</td></tr>
       <tr><td>Report challenge window</td><td>30 minutes</td></tr>
       <tr><td>Verification</td><td>redundant sampling + challenge</td></tr>
@@ -468,7 +465,7 @@ output: verified work credited to miner i</pre>
   <!-- 6 -->
   <h2 id="token"><span class="no">6</span>Tokenomics</h2>
   <p>
-    <strong>$BENTHIC</strong> is the network's unit of account: customers pay for compute in it, miners
+    <strong>$DELLMOD</strong> is the network's unit of account: customers pay for compute in it, miners
     earn it, and verifiers are bonded in it. Emission is disinflationary — a fixed schedule that
     halves at regular intervals so that early network growth is well rewarded while long-run supply is
     capped.
@@ -486,8 +483,8 @@ output: verified work credited to miner i</pre>
     <div class="frame">
       <svg viewBox="0 0 640 220" style="width:100%;height:auto;display:block" font-family="Inter,sans-serif">
         <defs>
-          <linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f65e06" stop-opacity="0.4"/><stop offset="1" stop-color="#f65e06" stop-opacity="0"/></linearGradient>
-          <linearGradient id="ln2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
+          <linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16fc34" stop-opacity="0.4"/><stop offset="1" stop-color="#16fc34" stop-opacity="0"/></linearGradient>
+          <linearGradient id="ln2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16fc34"/><stop offset="1" stop-color="#42ff7b"/></linearGradient>
         </defs>
         <g stroke="rgba(255,255,255,.05)"><line x1="44" y1="40" x2="620" y2="40"/><line x1="44" y1="90" x2="620" y2="90"/><line x1="44" y1="140" x2="620" y2="140"/><line x1="44" y1="182" x2="620" y2="182"/></g>
         <path d="M44 60 L188 60 L188 111 L332 111 L332 147 L476 147 L476 165 L620 165 L620 182 L44 182 Z" fill="url(#ar)"/>
@@ -502,7 +499,7 @@ output: verified work credited to miner i</pre>
         <text x="40" y="44" text-anchor="end" font-size="9.5" fill="#69707f">E₀</text>
       </svg>
     </div>
-    <div class="figcaption">Figure 2. Per-epoch $BENTHIC emission halves each era, so reward density is
+    <div class="figcaption">Figure 2. Per-epoch $DELLMOD emission halves each era, so reward density is
       highest for early miners while total supply stays capped. Illustrative.</div>
   </div>
 
@@ -528,26 +525,26 @@ output: verified work credited to miner i</pre>
   <p>
     The network is four cooperating roles: <strong>miners</strong> that run AI jobs, a
     <strong>verifier mesh</strong> that keeps them honest, <strong>pools</strong> that aggregate and
-    smooth rewards, and the <strong>settlement contract</strong> on Robinhood Chain that mints and
-    distributes $BENTHIC.
+    smooth rewards, and the <strong>settlement program</strong> on Solana that mints and
+    distributes $DELLMOD.
   </p>
   <div class="figure">
     <div class="frame">
       <svg viewBox="0 0 640 120" style="width:100%;height:auto;display:block" font-family="Inter,sans-serif">
         <defs><marker id="a2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#69707f"/></marker>
-          <linearGradient id="hl3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>
+          <linearGradient id="hl3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16fc34"/><stop offset="1" stop-color="#42ff7b"/></linearGradient></defs>
         <g fill="none" stroke="#69707f" stroke-width="1.3" marker-end="url(#a2)"><path d="M142 60 L168 60"/><path d="M312 60 L338 60"/><path d="M470 60 L496 60"/></g>
         <rect x="10" y="34" width="132" height="52" rx="13" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
         <text x="76" y="57" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Miners</text>
         <text x="76" y="73" text-anchor="middle" font-size="9.5" fill="#95a0b3">GPU · AI compute</text>
-        <rect x="170" y="34" width="142" height="52" rx="13" fill="#0e121b" stroke="#f65e06" stroke-width="1.4"/>
+        <rect x="170" y="34" width="142" height="52" rx="13" fill="#0e121b" stroke="#16fc34" stroke-width="1.4"/>
         <text x="241" y="57" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Verifier mesh</text>
         <text x="241" y="73" text-anchor="middle" font-size="9.5" fill="#95a0b3">redundant · challenge</text>
-        <rect x="340" y="34" width="130" height="52" rx="13" fill="rgba(246,94,6,.09)" stroke="url(#hl3)" stroke-width="1.6"/>
-        <text x="405" y="57" text-anchor="middle" font-size="12" font-weight="700" fill="#ffb27a">The Trench</text>
-        <text x="405" y="73" text-anchor="middle" font-size="9.5" fill="#c88a5f">pool · shares</text>
+        <rect x="340" y="34" width="130" height="52" rx="13" fill="rgba(22,252,52,.09)" stroke="url(#hl3)" stroke-width="1.6"/>
+        <text x="405" y="57" text-anchor="middle" font-size="12" font-weight="700" fill="#9effbd">The Backplane</text>
+        <text x="405" y="73" text-anchor="middle" font-size="9.5" fill="#3bcc6f">pool · shares</text>
         <rect x="498" y="34" width="134" height="52" rx="13" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
-        <text x="565" y="57" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Robinhood Chain</text>
+        <text x="565" y="57" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Solana</text>
         <text x="565" y="73" text-anchor="middle" font-size="9.5" fill="#95a0b3">settle · mint</text>
       </svg>
     </div>
@@ -556,12 +553,12 @@ output: verified work credited to miner i</pre>
   </div>
   <h3>7.1 Roadmap</h3>
   <ul>
-    <li><strong>Phase 0 — Fair launch.</strong> $BENTHIC launches as a community coin; liquidity and
+    <li><strong>Phase 0 — Fair launch.</strong> $DELLMOD launches as a community coin; liquidity and
       community form.</li>
-    <li><strong>Phase 1 — Testnet mining.</strong> PoUC client, verifier mesh and the Trench pool run
+    <li><strong>Phase 1 — Testnet mining.</strong> PoUC client, verifier mesh and the Backplane pool run
       on testnet with preview telemetry (live now on the dashboard).</li>
-    <li><strong>Phase 2 — Settlement.</strong> <code>BenthicPool.sol</code> deploys to Robinhood
-      Chain; epochs settle and rewards mint on-chain.</li>
+    <li><strong>Phase 2 — Settlement.</strong> <code>Dellmod Pool Program</code> deploys to Solana;
+      epochs settle and rewards distribute on-chain.</li>
     <li><strong>Phase 3 — Open market.</strong> External customers submit paid AI jobs; miner rewards
       shift from pure emission toward real compute demand.</li>
   </ul>
@@ -570,7 +567,7 @@ output: verified work credited to miner i</pre>
   <h2 id="security"><span class="no">8</span>Security</h2>
   <p>
     The dominant threats to a compute-mining network are <em>fake work</em> and <em>Sybil identities</em>.
-    Benthic addresses both economically rather than by trust.
+    Dellmod addresses both economically rather than by trust.
   </p>
   <ul>
     <li><strong>Fake work</strong> is caught by redundant sampling and the challenge game of
@@ -581,15 +578,15 @@ output: verified work credited to miner i</pre>
       pay, minus overhead.</li>
     <li><strong>Verifier collusion</strong> is bounded by requiring independent re-execution and by
       making challenge profitable, so a lazy or colluding verifier is undercut by an honest one.</li>
-    <li><strong>Settlement safety</strong> follows from the report challenge window on Robinhood Chain:
+    <li><strong>Settlement safety</strong> follows from the report challenge window on Solana:
       a malformed epoch can be disputed before rewards finalize.</li>
   </ul>
 
   <!-- 9 -->
-  <h2 id="launch"><span class="no">9</span>$BENTHIC &amp; Fair Launch</h2>
+  <h2 id="launch"><span class="no">9</span>$DELLMOD &amp; Fair Launch</h2>
   <p>
-    $BENTHIC is live first as an honest, community-owned coin at
-    <a href="https://ponsfamily.com/launchpad/0x038a2e2839d2be8b4e4180bc75e229224eca7a20" target="_blank" rel="noopener">ponsfamily.com</a>. There is no
+    $DELLMOD is live first as an honest, community-owned coin at
+    <a href="https://pump.fun/" target="_blank" rel="noopener">Pump.fun</a>. There is no
     insider allocation and no promise that today's coin already does everything in this paper — the
     mining network described here is being built <em>after</em> and <em>on top of</em> the launch.
     What the launch buys is the one thing infrastructure cannot bootstrap on its own: an aligned
@@ -597,10 +594,10 @@ output: verified work credited to miner i</pre>
   </p>
   <div class="callout" style="display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;justify-content:space-between">
     <div>
-      <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--o2);font-weight:600;margin-bottom:5px">$BENTHIC contract address</div>
-      <div class="mono" style="font-size:14px;word-break:break-all;color:var(--head)">0x038a2e2839d2be8b4e4180bc75e229224eca7a20</div>
+      <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--o2);font-weight:600;margin-bottom:5px">$DELLMOD contract address</div>
+      <div class="mono" style="font-size:14px;word-break:break-all;color:var(--head)">TBA</div>
     </div>
-    <a href="https://ponsfamily.com/launchpad/0x038a2e2839d2be8b4e4180bc75e229224eca7a20" target="_blank" rel="noopener" style="font-weight:600">Buy on launchpad →</a>
+    <a href="https://pump.fun/" target="_blank" rel="noopener" style="font-weight:600">Buy on launchpad →</a>
   </div>
 
   <div class="callout">
@@ -614,14 +611,14 @@ output: verified work credited to miner i</pre>
   <p class="footnote">
     This document is a technical and conceptual overview provided for information only. It is not
     financial, investment or legal advice, and it is not an offer or solicitation to buy any asset.
-    $BENTHIC is a community token; the mining network, settlement contracts, parameters and emission
+    $DELLMOD is a community token; the mining network, settlement programs, parameters and emission
     figures described here are design targets that are <strong>not yet deployed</strong> and may
     change. Forward-looking statements carry risk and uncertainty. Digital assets are volatile and
     you may lose everything you put in. Do your own research and never risk more than you can afford
     to lose.
   </p>
 
-  <div class="footer">© 2026 Benthic Labs · <a href="https://benthic.one/" target="_blank" rel="noopener">benthic.one</a> · <a href="mailto:hello@benthic.one">hello@benthic.one</a></div>
+  <div class="footer">© 2026 Dellmod Labs · <a href="https://nuttumrunit.github.io/Dellmod/" target="_blank" rel="noopener">nuttumrunit.github.io/Dellmod</a> · <a href="https://github.com/nuttumrunit/Dellmod/issues">GitHub Issues</a></div>
 </article>
 </main>
 

@@ -1,12 +1,12 @@
-# Contributing to Benthic
+# Contributing to Dellmod
 
-Thanks for your interest in Benthic 🐙 — contributions are welcome.
+Thanks for your interest in Dellmod 🐙 — contributions are welcome.
 
 ## Getting started
 
 ```bash
-git clone https://github.com/benthicdate/Benthic.git
-cd Benthic
+git clone https://github.com/nuttumrunit/Dellmod.git
+cd Dellmod
 python -m pip install -r requirements.txt
 python -m pytest -q          # run the test suite
 python -m engine.server      # serve the site + API at http://localhost:8777
@@ -25,11 +25,11 @@ python -m engine.server      # serve the site + API at http://localhost:8777
 ## Reporting issues
 
 Open a GitHub issue with steps to reproduce, expected vs. actual behaviour, and
-your environment. Security-sensitive reports: email **hello@benthic.one**
+your environment. Security-sensitive reports: email **GitHub Issues**
 instead of filing a public issue.
 
 ## Scope note
 
-Benthic is pre-launch. The mining network, settlement contracts and parameters
+Dellmod is pre-launch. The mining network, settlement programs and parameters
 described in the whitepaper are design targets under active development. The
 dashboard currently shows clearly-labelled sample telemetry.

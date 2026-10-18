@@ -1,4 +1,4 @@
-"""The Trench — Benthic's Proof-of-Useful-Compute mining pool.
+"""The Backplane — Dellmod's Proof-of-Useful-Compute mining pool.
 
 Miners accrue *shares* equal to their verified work (quality-scaled TFLOP-hours).
 When the pool settles an epoch, that epoch's emission is split in proportion to
@@ -18,7 +18,7 @@ def reward_split(works: Dict[str, float], epoch_emission: float,
     """Split ``epoch_emission`` across miners by verified work (Eq. 3).
 
     ``works`` maps miner id -> verified, quality-scaled work for the epoch.
-    Returns miner id -> reward in $BENTHIC. If no work was done, everyone gets 0.
+    Returns miner id -> reward in $DELLMOD. If no work was done, everyone gets 0.
     """
     if not 0.0 <= fee < 1.0:
         raise ValueError("fee must be in [0, 1)")

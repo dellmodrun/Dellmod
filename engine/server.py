@@ -53,7 +53,7 @@ class Handler(SimpleHTTPRequestHandler):
 def main() -> None:
     port = int(os.environ.get("PORT", "8777"))
     server = ThreadingHTTPServer(("0.0.0.0", port), Handler)
-    print(f"Benthic engine v{__version__} serving on http://0.0.0.0:{port}")
+    print(f"Dellmod engine v{__version__} serving on http://0.0.0.0:{port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:  # pragma: no cover

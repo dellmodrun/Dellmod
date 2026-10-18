@@ -32,22 +32,22 @@ class Miner:
         return self.tflops * self.quality
 
 
-# Preview miner set (deep-sea themed handles). Replaced by live discovery.
+# Preview miner set. Replaced by live discovery.
 _MINERS: List[Miner] = [
-    Miner("abyss.bnth", 6120, 0.99),
-    Miner("kraken-07", 4980, 0.98),
-    Miner("mariana.eth", 3910, 0.99),
-    Miner("nautilus", 3120, 0.97),
-    Miner("deepcurrent", 2670, 0.98),
-    Miner("tentacle.io", 2040, 0.94, online=False),
-    Miner("benthos-lab", 1610, 0.96),
+    Miner("module-01", 6120, 0.99),
+    Miner("relay-07", 4980, 0.98),
+    Miner("matrix-03", 3910, 0.99),
+    Miner("signal-12", 3120, 0.97),
+    Miner("compute-07", 2670, 0.98),
+    Miner("socket-09", 2040, 0.94, online=False),
+    Miner("logic-lab", 1610, 0.96),
 ]
 
 _POOLS = [
-    ("Abyssal Pool", 0.34, "#f65e06"),
-    ("Trench Collective", 0.27, "#ff8a3d"),
-    ("Solo divers", 0.21, "#ffb885"),
-    ("Reef Syndicate", 0.18, "#b5471a"),
+    ("Core Bus", 0.34, "#16fc34"),
+    ("Backplane Pool", 0.27, "#42ff7b"),
+    ("Independent nodes", 0.21, "#9effbd"),
+    ("Relay Collective", 0.18, "#0ea84a"),
 ]
 
 
@@ -124,7 +124,7 @@ def build_snapshot(as_of: Optional[datetime.date] = None) -> Dict:
             {"k": "Active miners", "v": "1,284", "note": "+8.2% · 24h", "tone": "good"},
             {"k": "Network compute", "v": f"{total_tflops/1000:.1f} PFLOPs", "note": "+5.1% · 24h", "tone": "good"},
             {"k": "Verified-job rate", "v": "99.4%", "note": "nominal", "tone": "good"},
-            {"k": "Reward / TFLOP·h", "v": "0.42 BENTHIC", "note": "−1.3% · 24h", "tone": "bad"},
+            {"k": "Reward / TFLOP·h", "v": "0.42 DELLMOD", "note": "−1.3% · 24h", "tone": "bad"},
             {"k": "Pool queue depth", "v": "3.1k jobs", "note": "steady", "tone": "neu"},
         ],
         "compute_chart": {"dates": dates, "compute": compute, "price": price},
@@ -137,7 +137,7 @@ def build_snapshot(as_of: Optional[datetime.date] = None) -> Dict:
             "Steady": {"util": 0.86, "reward": 0.28, "share": 24, "dur": 34},
         },
         "token": {
-            "symbol": "BENTHIC",
+            "symbol": "DELLMOD",
             "max_supply": f"{cap:,.0f}",
             "circulating": "142,600,000",
             "mined_pct": round(minted / cap * 100, 1),
@@ -145,7 +145,7 @@ def build_snapshot(as_of: Optional[datetime.date] = None) -> Dict:
             "next_halving": f"epoch {emission.DEFAULT_HALVING:,}",
         },
         "params": {
-            "chain": "Robinhood Chain (L2)",
+            "chain": "Solana",
             "contract": "not deployed · preview",
             "epoch": "1 h",
             "work": "Proof of Useful Compute",

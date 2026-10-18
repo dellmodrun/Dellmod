@@ -23,7 +23,7 @@ def build(out_dir: str = ".") -> str:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Build Benthic dashboard telemetry")
+    ap = argparse.ArgumentParser(description="Build Dellmod dashboard telemetry")
     ap.add_argument("--out", default=".", help="output directory (default: cwd)")
     args = ap.parse_args()
     path = build(args.out)

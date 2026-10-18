@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-22",
+  "as_of": "2026-10-18",
   "window_days": 30,
   "compute_index": 73,
   "phase": "Expansion",
@@ -37,7 +37,7 @@
     },
     {
       "k": "Reward / TFLOP·h",
-      "v": "0.42 BENTHIC",
+      "v": "0.42 DELLMOD",
       "note": "−1.3% · 24h",
       "tone": "bad"
     },
@@ -50,36 +50,36 @@
   ],
   "compute_chart": {
     "dates": [
-      "2026-06-23",
-      "2026-06-24",
-      "2026-06-25",
-      "2026-06-26",
-      "2026-06-27",
-      "2026-06-28",
-      "2026-06-29",
-      "2026-06-30",
-      "2026-07-01",
-      "2026-07-02",
-      "2026-07-03",
-      "2026-07-04",
-      "2026-07-05",
-      "2026-07-06",
-      "2026-07-07",
-      "2026-07-08",
-      "2026-07-09",
-      "2026-07-10",
-      "2026-07-11",
-      "2026-07-12",
-      "2026-07-13",
-      "2026-07-14",
-      "2026-07-15",
-      "2026-07-16",
-      "2026-07-17",
-      "2026-07-18",
-      "2026-07-19",
-      "2026-07-20",
-      "2026-07-21",
-      "2026-07-22"
+      "2026-09-19",
+      "2026-09-20",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-26",
+      "2026-09-27",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18"
     ],
     "compute": [
       40.0,
@@ -148,71 +148,71 @@
   },
   "pool_dist": [
     {
-      "label": "Abyssal Pool",
+      "label": "Core Bus",
       "share": 0.34,
-      "color": "#f65e06"
+      "color": "#16fc34"
     },
     {
-      "label": "Trench Collective",
+      "label": "Backplane Pool",
       "share": 0.27,
-      "color": "#ff8a3d"
+      "color": "#42ff7b"
     },
     {
-      "label": "Solo divers",
+      "label": "Independent nodes",
       "share": 0.21,
-      "color": "#ffb885"
+      "color": "#9effbd"
     },
     {
-      "label": "Reef Syndicate",
+      "label": "Relay Collective",
       "share": 0.18,
-      "color": "#b5471a"
+      "color": "#0ea84a"
     }
   ],
   "leaderboard": [
     {
-      "miner": "abyss.bnth",
+      "miner": "module-01",
       "tflops": 6120,
       "share": 0.038,
       "reward": "5.0k",
       "status": "online"
     },
     {
-      "miner": "kraken-07",
+      "miner": "relay-07",
       "tflops": 4980,
       "share": 0.031,
       "reward": "4.0k",
       "status": "online"
     },
     {
-      "miner": "mariana.eth",
+      "miner": "matrix-03",
       "tflops": 3910,
       "share": 0.024,
       "reward": "3.2k",
       "status": "online"
     },
     {
-      "miner": "nautilus",
+      "miner": "signal-12",
       "tflops": 3120,
       "share": 0.019,
       "reward": "2.5k",
       "status": "online"
     },
     {
-      "miner": "deepcurrent",
+      "miner": "compute-07",
       "tflops": 2670,
       "share": 0.016,
       "reward": "2.2k",
       "status": "online"
     },
     {
-      "miner": "tentacle.io",
+      "miner": "socket-09",
       "tflops": 2040,
       "share": 0.012,
       "reward": "1.6k",
       "status": "idle"
     },
     {
-      "miner": "benthos-lab",
+      "miner": "logic-lab",
       "tflops": 1610,
       "share": 0.01,
       "reward": "1.3k",
@@ -272,15 +272,15 @@
     }
   },
   "token": {
-    "symbol": "BENTHIC",
+    "symbol": "DELLMOD",
     "max_supply": "1,000,000,000",
     "circulating": "142,600,000",
-    "mined_pct": 3.9,
+    "mined_pct": 8.2,
     "emission_epoch": "20,000",
     "next_halving": "epoch 25,000"
   },
   "params": {
-    "chain": "Robinhood Chain (L2)",
+    "chain": "Solana",
     "contract": "not deployed · preview",
     "epoch": "1 h",
     "work": "Proof of Useful Compute",
@@ -289,7 +289,7 @@
   },
   "feed": [
     {
-      "epoch": "2026-07-22 · 14:00",
+      "epoch": "2026-10-18 · 14:00",
       "phase": "Expansion",
       "compute": "158.9 PF",
       "miners": 1284,
@@ -297,7 +297,7 @@
       "status": "finalized"
     },
     {
-      "epoch": "2026-07-22 · 13:00",
+      "epoch": "2026-10-18 · 13:00",
       "phase": "Expansion",
       "compute": "165.9 PF",
       "miners": 1271,
@@ -305,7 +305,7 @@
       "status": "finalized"
     },
     {
-      "epoch": "2026-07-22 · 12:00",
+      "epoch": "2026-10-18 · 12:00",
       "phase": "Expansion",
       "compute": "141.9 PF",
       "miners": 1258,
@@ -313,7 +313,7 @@
       "status": "finalized"
     },
     {
-      "epoch": "2026-07-22 · 11:00",
+      "epoch": "2026-10-18 · 11:00",
       "phase": "Expansion",
       "compute": "139.8 PF",
       "miners": 1245,
@@ -321,7 +321,7 @@
       "status": "finalized"
     },
     {
-      "epoch": "2026-07-22 · 10:00",
+      "epoch": "2026-10-18 · 10:00",
       "phase": "Expansion",
       "compute": "149.8 PF",
       "miners": 1232,
@@ -329,7 +329,7 @@
       "status": "finalized"
     },
     {
-      "epoch": "2026-07-22 · 09:00",
+      "epoch": "2026-10-18 · 09:00",
       "phase": "Expansion",
       "compute": "147.0 PF",
       "miners": 1219,

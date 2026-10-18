@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Benthic Network</title>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<title>Dellmod Network</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/dellmod-logo.jpg" />
 <link rel="shortcut icon" href="assets/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +16,7 @@
     --card:#12161f; --card2:#161b26; --tile:#0e121b;
     --line:rgba(255,255,255,.07); --line2:rgba(255,255,255,.045);
     --ink:#e7e9ef; --head:#f6f7fa; --muted:#95a0b3; --faint:#69707f;
-    --o:#f65e06; --o2:#ff8a3d; --o3:#ffb27a;
+    --o:#16fc34; --o2:#42ff7b; --o3:#9effbd;
     --up:#3ecf8e; --down:#ff6b8a; --warn:#f5b544;
     --shadow:0 10px 30px -12px rgba(0,0,0,.6);
   }
@@ -24,8 +24,8 @@
   html{scroll-behavior:smooth}
   body{margin:0;color:var(--ink);font-family:"Inter",system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased;
     background:
-      radial-gradient(900px 500px at 78% -8%, rgba(246,94,6,.13), transparent 60%),
-      radial-gradient(700px 500px at 8% 4%, rgba(255,138,61,.06), transparent 55%),
+      radial-gradient(900px 500px at 78% -8%, rgba(22,252,52,.13), transparent 60%),
+      radial-gradient(700px 500px at 8% 4%, rgba(22,252,52,.06), transparent 55%),
       linear-gradient(180deg,var(--bg2),var(--bg));
     background-attachment:fixed;min-height:100vh}
   a{color:var(--o2);text-decoration:none} a:hover{text-decoration:underline}
@@ -51,7 +51,7 @@
   .tabs{display:flex;gap:6px;padding:14px 30px 0;max-width:1200px;margin:0 auto}
   .tabs a{padding:9px 18px;font-size:13.5px;font-weight:500;color:var(--muted);border-radius:999px;border:1px solid transparent}
   .tabs a:hover{color:var(--ink);text-decoration:none;background:rgba(255,255,255,.03)}
-  .tabs a.active{color:#fff;background:linear-gradient(180deg,rgba(246,94,6,.22),rgba(246,94,6,.1));border-color:rgba(246,94,6,.4)}
+  .tabs a.active{color:#fff;background:linear-gradient(180deg,rgba(22,252,52,.22),rgba(22,252,52,.1));border-color:rgba(22,252,52,.4)}
 
   .wrap{max-width:1200px;margin:0 auto;padding:20px 30px 90px}
   .view{display:none;animation:fade .3s ease} .view.active{display:block}
@@ -77,7 +77,7 @@
   .ring{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px 0}
   .ringval{font-family:"Space Grotesk",sans-serif;font-size:46px;font-weight:700;fill:var(--head)}
   .phase-tag{margin-top:2px;font-size:13px;font-weight:600;padding:5px 16px;border-radius:999px;
-    color:var(--o2);background:rgba(246,94,6,.1);border:1px solid rgba(246,94,6,.32)}
+    color:var(--o2);background:rgba(22,252,52,.1);border:1px solid rgba(22,252,52,.32)}
 
   /* pills */
   .pills{display:flex;gap:10px;margin-top:2px}
@@ -86,7 +86,7 @@
   .pill .pv{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--faint);margin-top:5px}
   .pill .bar{height:6px;border-radius:4px;background:rgba(255,255,255,.06);overflow:hidden;margin-top:8px}
   .pill .bar>i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--o),var(--o2))}
-  .pill.cur{border-color:rgba(246,94,6,.45);background:linear-gradient(180deg,rgba(246,94,6,.12),var(--tile))}
+  .pill.cur{border-color:rgba(22,252,52,.45);background:linear-gradient(180deg,rgba(22,252,52,.12),var(--tile))}
   .pill.cur .pk{color:var(--o2);font-weight:600}
 
   /* driver rows */
@@ -101,7 +101,7 @@
   tbody tr:last-child td{border-bottom:none}
   th{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);font-weight:600}
   td.n{text-align:right;font-family:"JetBrains Mono",monospace}
-  tr.cur td{background:rgba(246,94,6,.07)}
+  tr.cur td{background:rgba(22,252,52,.07)}
   .bar-h{display:inline-block;height:8px;border-radius:5px;vertical-align:middle;background:linear-gradient(90deg,var(--o),var(--o2))}
   .stat{display:inline-flex;align-items:center;gap:6px;font-size:12px}
   .stat .d{width:7px;height:7px;border-radius:50%}
@@ -132,8 +132,8 @@
 </head>
 <body>
 <div class="topbar">
-  <img src="assets/logo.png" alt="Benthic" />
-  <span class="name">Benthic</span>
+  <img src="assets/dellmod-logo.jpg" alt="Dellmod" />
+  <span class="name">Dellmod</span>
   <span class="badge"><span class="dot"></span>sample data</span>
   <span class="spacer"></span>
   <span class="stamp" id="asof">loading…</span>
@@ -149,9 +149,9 @@
 
   <div class="notice">
     <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    <span><b>Preview dashboard — illustrative sample data.</b> Benthic is pre-launch; these figures
+    <span><b>Preview dashboard — illustrative sample data.</b> Dellmod is pre-launch; these figures
       demonstrate what the live network will report and are replaced by real telemetry once mining goes
-      live on Robinhood Chain.</span>
+      live on Solana.</span>
   </div>
 
   <!-- ===== NETWORK ===== -->
@@ -161,7 +161,7 @@
         <h2 style="align-self:flex-start">Network Compute Index</h2>
         <svg viewBox="0 0 220 200" style="width:100%;max-width:250px">
           <defs>
-            <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient>
+            <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16fc34"/><stop offset="1" stop-color="#42ff7b"/></linearGradient>
           </defs>
           <circle cx="110" cy="104" r="82" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="15"/>
           <circle id="ringArc" cx="110" cy="104" r="82" fill="none" stroke="url(#ring)" stroke-width="15" stroke-linecap="round"
@@ -182,7 +182,7 @@
 
     <div class="card" style="margin-top:20px">
       <h2>Network compute · trailing window</h2>
-      <div class="sub" id="chartSub">normalized compute index · solid = compute · dashed = BENTHIC price</div>
+      <div class="sub" id="chartSub">normalized compute index · solid = compute · dashed = DELLMOD price</div>
       <svg id="chart" viewBox="0 0 720 260" style="width:100%;height:auto;display:block"></svg>
     </div>
 
@@ -211,7 +211,7 @@
     <div class="card">
       <h2>Miner leaderboard</h2>
       <div class="sub">ranked by sustained compute contribution</div>
-      <table><thead><tr><th>Miner</th><th style="text-align:right">Compute</th><th style="text-align:right">Share</th><th>Contribution</th><th style="text-align:right">Reward · BENTHIC</th><th>State</th></tr></thead><tbody id="lbBody"></tbody></table>
+      <table><thead><tr><th>Miner</th><th style="text-align:right">Compute</th><th style="text-align:right">Share</th><th>Contribution</th><th style="text-align:right">Reward · DELLMOD</th><th>State</th></tr></thead><tbody id="lbBody"></tbody></table>
     </div>
     <div class="grid row12" style="margin-top:20px">
       <div class="card">
@@ -224,7 +224,7 @@
         <h2>Phase profile</h2>
         <div class="sub">how the network behaves in each growth phase</div>
         <table><thead><tr><th>Phase</th><th style="text-align:right">Util.</th><th style="text-align:right">Reward*</th><th style="text-align:right">Share</th><th style="text-align:right">Avg dur.</th></tr></thead><tbody id="phaseBody"></tbody></table>
-        <div class="note">*reward = BENTHIC per TFLOP·hour. Emission tapers as utilization saturates.</div>
+        <div class="note">*reward = DELLMOD per TFLOP·hour. Emission tapers as utilization saturates.</div>
       </div>
     </div>
   </section>
@@ -233,12 +233,12 @@
   <section class="view" id="view-token">
     <div class="grid row12">
       <div class="card">
-        <h2>$BENTHIC · latest epoch</h2>
+        <h2>$DELLMOD · latest epoch</h2>
         <div class="sub">on-chain state for the most recent settled epoch</div>
         <div id="tokenReport"></div>
         <div class="prog"><i id="mineProg"></i></div>
         <div class="note" id="mineNote"></div>
-        <div class="note">Emission &amp; rewards are computed from network telemetry. The settlement contract on <strong>Robinhood Chain</strong> is <strong>not yet deployed</strong> — figures are preview/testnet.</div>
+        <div class="note">Emission &amp; rewards are computed from network telemetry. The settlement program on <strong>Solana</strong> is <strong>not yet deployed</strong> — figures are preview/testnet.</div>
       </div>
       <div class="card">
         <h2>Protocol parameters</h2>
@@ -255,13 +255,13 @@
 
     <div class="card" style="margin-top:20px">
       <h2>Mining pipeline</h2>
-      <div class="sub">how idle AI compute becomes settled $BENTHIC</div>
+      <div class="sub">how idle AI compute becomes settled $DELLMOD</div>
       <div class="flow">
-        <div class="fnode"><div class="l">Dive · off-chain</div><div class="t">miner runs AI job</div><div class="t">GPU / accelerator</div></div>
+        <div class="fnode"><div class="l">Execute · off-chain</div><div class="t">miner runs AI job</div><div class="t">GPU / accelerator</div></div>
         <div class="farrow">→</div>
         <div class="fnode"><div class="l">Verify</div><div class="t">redundant re-compute</div><div class="t mono">{job, output, proof}</div></div>
         <div class="farrow">→</div>
-        <div class="fnode"><div class="l">Settle · Robinhood Chain</div><div class="t mono">BenthicPool.sol</div><div class="t">reward · finalize</div></div>
+        <div class="fnode"><div class="l">Settle · Solana</div><div class="t mono">Dellmod Pool Program</div><div class="t">reward · finalize</div></div>
       </div>
     </div>
 
@@ -270,20 +270,20 @@
       <div class="sub">how work is measured, verified and rewarded</div>
       <svg viewBox="0 0 680 100" style="width:100%;height:auto;display:block" font-family="Inter,sans-serif">
         <defs><marker id="ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#69707f"/></marker>
-          <linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>
+          <linearGradient id="hl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16fc34"/><stop offset="1" stop-color="#42ff7b"/></linearGradient></defs>
         <g fill="none" stroke="#69707f" stroke-width="1.3" marker-end="url(#ar)"><path d="M150 50 L176 50"/><path d="M324 50 L350 50"/><path d="M498 50 L524 50"/></g>
         <rect x="12" y="26" width="138" height="48" rx="12" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
         <text x="81" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Miners</text>
         <text x="81" y="61" text-anchor="middle" font-size="9.5" fill="#95a0b3">GPU · AI compute</text>
-        <rect x="178" y="26" width="146" height="48" rx="12" fill="#0e121b" stroke="#f65e06" stroke-width="1.4"/>
+        <rect x="178" y="26" width="146" height="48" rx="12" fill="#0e121b" stroke="#16fc34" stroke-width="1.4"/>
         <text x="251" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Verifier mesh</text>
         <text x="251" y="61" text-anchor="middle" font-size="9.5" fill="#95a0b3">redundant · challenge</text>
-        <rect x="352" y="26" width="146" height="48" rx="12" fill="rgba(246,94,6,.09)" stroke="url(#hl)" stroke-width="1.6"/>
-        <text x="425" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#ffb27a">BenthicPool</text>
-        <text x="425" y="61" text-anchor="middle" font-size="9.5" fill="#c88a5f">rewards · epochs</text>
+        <rect x="352" y="26" width="146" height="48" rx="12" fill="rgba(22,252,52,.09)" stroke="url(#hl)" stroke-width="1.6"/>
+        <text x="425" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#9effbd">DellmodPool</text>
+        <text x="425" y="61" text-anchor="middle" font-size="9.5" fill="#3bcc6f">rewards · epochs</text>
         <rect x="526" y="26" width="142" height="48" rx="12" fill="#0e121b" stroke="#3a4152" stroke-width="1.2"/>
-        <text x="597" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Robinhood Chain</text>
-        <text x="597" y="61" text-anchor="middle" font-size="9.5" fill="#95a0b3">settlement · L2</text>
+        <text x="597" y="46" text-anchor="middle" font-size="12" font-weight="600" fill="#f2f3f6">Solana</text>
+        <text x="597" y="61" text-anchor="middle" font-size="9.5" fill="#95a0b3">settlement · Solana</text>
       </svg>
     </div>
   </section>
@@ -297,8 +297,8 @@ var PHASES=[['bootstrap','Bootstrap'],['expansion','Expansion'],['steady','Stead
 
 function render(d){
   el('asof').textContent='epoch '+d.as_of+' · '+d.window_days+'-epoch window';
-  el('foot').innerHTML='Preview telemetry for the <strong>Benthic</strong> compute network as of <strong>'+d.as_of+
-    '</strong>. Proof-of-Useful-Compute mining; settlement on Robinhood Chain is not yet live. Not financial advice.';
+  el('foot').innerHTML='Preview telemetry for the <strong>Dellmod</strong> compute network as of <strong>'+d.as_of+
+    '</strong>. Proof-of-Useful-Compute mining; settlement on Solana is not yet live. Not financial advice.';
 
   // ring gauge
   var C=2*Math.PI*82, v=d.compute_index;
@@ -312,8 +312,8 @@ function render(d){
   var tiles=[
     ['Active miners', nk.active_miners.toLocaleString(), '', ''],
     ['Network compute', (nk.tflops/1000).toFixed(1), ' PFLOPs', ''],
-    ['Mined · epoch', (nk.mined_epoch/1000).toFixed(1)+'k', ' BENTHIC', ''],
-    ['Reward / TFLOP·h', nk.reward_per_tflop.toFixed(2), ' BENTHIC', '']
+    ['Mined · epoch', (nk.mined_epoch/1000).toFixed(1)+'k', ' DELLMOD', ''],
+    ['Reward / TFLOP·h', nk.reward_per_tflop.toFixed(2), ' DELLMOD', '']
   ];
   el('tiles').innerHTML=tiles.map(function(t){
     return '<div class="tile"><div class="lbl">'+t[0]+'</div><div class="val">'+t[1]+'<small>'+t[2]+'</small></div></div>';
@@ -327,7 +327,7 @@ function render(d){
 
   // chart
   buildChart(d.compute_chart);
-  el('chartSub').textContent='normalized compute index · '+d.window_days+' epochs · solid = compute · dashed = BENTHIC price';
+  el('chartSub').textContent='normalized compute index · '+d.window_days+' epochs · solid = compute · dashed = DELLMOD price';
 
   // donut (pool distribution)
   buildDonut(d.pool_dist);
@@ -371,7 +371,7 @@ function render(d){
   el('tokenReport').innerHTML=
     kv('Symbol','<span style="color:var(--o2)">$'+tk.symbol+'</span>')+
     kv('Max supply',tk.max_supply)+kv('Circulating',tk.circulating)+
-    kv('Emitted · epoch',tk.emission_epoch+' BENTHIC')+kv('Next halving',tk.next_halving);
+    kv('Emitted · epoch',tk.emission_epoch+' DELLMOD')+kv('Next halving',tk.next_halving);
   el('mineProg').style.width=tk.mined_pct+'%';
   el('mineNote').innerHTML='<strong>'+tk.mined_pct+'%</strong> of max supply mined';
 
@@ -395,8 +395,8 @@ function buildChart(c){
   function X(i){return x0+(n<=1?0:i/(n-1)*pw);}
   function Y(v){return y1 - v/100*ph;}
   var s='<defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1">'+
-    '<stop offset="0" stop-color="#f65e06" stop-opacity="0.42"/><stop offset="1" stop-color="#f65e06" stop-opacity="0"/></linearGradient>'+
-    '<linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f65e06"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs>';
+    '<stop offset="0" stop-color="#16fc34" stop-opacity="0.42"/><stop offset="1" stop-color="#16fc34" stop-opacity="0"/></linearGradient>'+
+    '<linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16fc34"/><stop offset="1" stop-color="#42ff7b"/></linearGradient></defs>';
   // gridlines
   [0,25,50,75,100].forEach(function(t){
     s+='<line x1="'+x0+'" y1="'+Y(t).toFixed(1)+'" x2="'+x1+'" y2="'+Y(t).toFixed(1)+'" stroke="rgba(255,255,255,.05)"/>'+
@@ -415,8 +415,8 @@ function buildChart(c){
   s+='<path d="'+pr+'" fill="none" stroke="#ffd7b0" stroke-width="1.4" opacity="0.5" stroke-dasharray="3 5"/>';
   // end marker
   var lx=X(n-1),ly=Y(c.compute[n-1]);
-  s+='<circle cx="'+lx.toFixed(1)+'" cy="'+ly.toFixed(1)+'" r="4.5" fill="#0c0f16" stroke="#ff8a3d" stroke-width="2.2"/>';
-  s+='<text x="'+lx.toFixed(1)+'" y="'+(ly-11).toFixed(1)+'" text-anchor="end" font-size="11" font-weight="600" fill="#ffb27a" font-family="Space Grotesk">'+c.compute[n-1]+'</text>';
+  s+='<circle cx="'+lx.toFixed(1)+'" cy="'+ly.toFixed(1)+'" r="4.5" fill="#0c0f16" stroke="#42ff7b" stroke-width="2.2"/>';
+  s+='<text x="'+lx.toFixed(1)+'" y="'+(ly-11).toFixed(1)+'" text-anchor="end" font-size="11" font-weight="600" fill="#9effbd" font-family="Space Grotesk">'+c.compute[n-1]+'</text>';
   el('chart').innerHTML=s;
 }
 

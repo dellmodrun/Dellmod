@@ -1,29 +1,28 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Benthic" height="120" />
+  <img src="assets/dellmod-logo.jpg" alt="Dellmod" height="120" />
 </p>
 
-<h1 align="center">Benthic</h1>
+<h1 align="center">Dellmod</h1>
 
 <p align="center">
-  <b>Proof-of-Useful-Compute mining for AI — settled on Robinhood Chain.</b><br/>
-  <i>Idle accelerators drift down, miners dive to do the work, verified compute settles into $BENTHIC.</i>
+  <b>Proof-of-Useful-Compute mining for AI — settled on Solana.</b><br/>
+  <i>Idle accelerators connect, miners execute useful work, verified compute settles into $DELLMOD.</i>
 </p>
 
 <p align="center">
-  <a href="https://github.com/benthicdate/Benthic/actions/workflows/ci.yml"><img alt="tests" src="https://github.com/benthicdate/Benthic/actions/workflows/ci.yml/badge.svg?branch=master"></a>
-  <a href="https://github.com/benthicdate/Benthic/actions/workflows/docker.yml"><img alt="container" src="https://github.com/benthicdate/Benthic/actions/workflows/docker.yml/badge.svg?branch=master"></a>
-  <a href="https://github.com/benthicdate/Benthic/pkgs/container/benthic"><img alt="ghcr" src="https://img.shields.io/badge/ghcr.io-image-2496ed?logo=docker&logoColor=white"></a>
-  <a href="https://benthic.one"><img alt="site" src="https://img.shields.io/badge/site-benthic.one-f65e06?logo=googlechrome&logoColor=white"></a>
+  <a href="https://github.com/nuttumrunit/Dellmod/actions/workflows/ci.yml"><img alt="tests" src="https://github.com/nuttumrunit/Dellmod/actions/workflows/ci.yml/badge.svg?branch=master"></a>
+  <a href="https://github.com/nuttumrunit/Dellmod/actions/workflows/docker.yml"><img alt="container" src="https://github.com/nuttumrunit/Dellmod/actions/workflows/docker.yml/badge.svg?branch=master"></a>
+  <a href="https://github.com/nuttumrunit/Dellmod/pkgs/container/dellmod"><img alt="ghcr" src="https://img.shields.io/badge/ghcr.io-image-2496ed?logo=docker&logoColor=white"></a>
+  <a href="https://nuttumrunit.github.io/Dellmod/"><img alt="site" src="https://img.shields.io/badge/site-Dellmod-16fc34?logo=googlechrome&logoColor=white"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-3ecf8e?logo=python&logoColor=white">
-  <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-ff8a3d"></a>
-  <a href="https://x.com/benthicdate"><img alt="X" src="https://img.shields.io/badge/follow-%40benthicdate-111?logo=x&logoColor=white"></a>
+  <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-16fc34"></a>
 </p>
 
 ---
 
 ## Table of contents
 
-- [What is Benthic?](#what-is-benthic)
+- [What is Dellmod?](#what-is-dellmod)
 - [Why Proof of Useful Compute?](#why-proof-of-useful-compute)
 - [How it works](#how-it-works)
 - [Architecture](#architecture)
@@ -40,28 +39,28 @@
 
 ---
 
-## What is Benthic?
+## What is Dellmod?
 
 The world is full of **idle accelerators** and **hungry AI workloads**, yet the two rarely meet in a
 market that pays fairly for real work. Classical crypto mining burns electricity on hashes that
 secure a ledger but produce nothing else; proof-of-stake pays capital for holding capital.
 
-**Benthic proposes a third path:** a network where miners earn the native token **$BENTHIC** by
+**Dellmod proposes a third path:** a network where miners earn the native token **$DELLMOD** by
 contributing *verifiable AI computation* — inference and training jobs — instead of wasted hashpower.
 Work is metered in verified TFLOP-hours, checked by a redundant verifier mesh, pooled in an open
-mining pool (the **Trench**), and settled on **Robinhood Chain**.
+mining pool (the **Backplane**), and settled on **Solana**.
 
-Like the *benthic zone* of the ocean — the deep floor where everything eventually settles and is
-turned into something useful — the protocol is where scattered, idle compute settles into value.
+Like a modular compute backplane, Dellmod turns scattered accelerators into coordinated,
+verifiable capacity that settles into value.
 
-> **Status:** pre-launch. The $BENTHIC token launches first as a fair, community-owned coin; the
+> **Status:** pre-launch. The $DELLMOD token launches first as a fair, community-owned coin; the
 > mining network in this repo is the reference implementation being built on top of it. The dashboard
 > currently shows clearly-labelled **sample telemetry**.
 
-- 🌐 **Website:** https://benthic.one
-- 📈 **Live dashboard:** https://benthic.one/terminal.html
-- 📄 **Whitepaper:** https://benthic.one/index.html
-- 🪙 **Buy $BENTHIC:** https://ponsfamily.com/launchpad/0x038a2e2839d2be8b4e4180bc75e229224eca7a20
+- 🌐 **Website:** https://nuttumrunit.github.io/Dellmod/
+- 📈 **Live dashboard:** https://nuttumrunit.github.io/Dellmod/terminal.html
+- 📄 **Whitepaper:** https://nuttumrunit.github.io/Dellmod/index.html
+- 🪙 **Buy $DELLMOD:** https://pump.fun/
 
 ---
 
@@ -73,7 +72,7 @@ turned into something useful — the protocol is where scattered, idle compute s
 | Proof of Stake | locking capital | — |
 | **Proof of Useful Compute** | **running real AI jobs** | **useful inference / training** |
 
-The hard part is paying for a computation **without re-running it yourself**. Benthic combines cheap
+The hard part is paying for a computation **without re-running it yourself**. Dellmod combines cheap
 statistical checks with an economic dispute game so that honest computation is the only strategy that
 pays (see [`engine/verify.py`](engine/verify.py)).
 
@@ -81,19 +80,19 @@ pays (see [`engine/verify.py`](engine/verify.py)).
 
 ## How it works
 
-Each job flows through four stages — one **dive**:
+Each job flows through four stages — one **verified execution**:
 
 ```
   ┌──────────┐     ┌────────┐     ┌───────────────────┐     ┌──────────┐
-  │ Dispatch │ ──▶ │  Dive  │ ──▶ │      Verify       │ ──▶ │  Settle  │
-  │ job→miner│     │ run AI │     │ redundant+challenge│     │mint BENTHIC│
+  │ Dispatch │ ──▶ │ Execute │ ──▶ │      Verify       │ ──▶ │  Settle  │
+  │ job→miner│     │ run AI │     │ redundant+challenge│     │mint DELLMOD│
   └──────────┘     └────────┘     └───────────────────┘     └──────────┘
 ```
 
 1. **Dispatch** — a job with a known compute profile is sent to a miner (and, with probability `s`, a shadow miner).
-2. **Dive** — the miner runs the model and returns the output plus a commitment.
+2. **Execute** — the miner runs the model and returns the output plus a commitment.
 3. **Verify** — redundant sampling + an economic challenge window catch fabricated work.
-4. **Settle** — verified work is aggregated per epoch and paid out in $BENTHIC on Robinhood Chain.
+4. **Settle** — verified work is aggregated per epoch and paid out in $DELLMOD on Solana.
 
 The probability a fabricated result escapes **both** checks is bounded by `P_escape = (1 − s)(1 − p_c)`.
 With slashing above the expected gain from cheating, honest work is the unique profitable strategy.
@@ -105,13 +104,13 @@ With slashing above the expected gain from cheating, honest work is the unique p
 ```mermaid
 flowchart LR
     M["Miners<br/>GPU · AI compute"] --> V["Verifier mesh<br/>redundant · challenge"]
-    V --> P["The Trench<br/>pool · shares"]
-    P --> C["BenthicPool.sol<br/>Robinhood Chain · L2"]
+    V --> P["The Backplane<br/>pool · shares"]
+    P --> C["Dellmod Pool Program<br/>Solana"]
     C -. rewards .-> M
 ```
 
-- **`engine/emission.py`** — disinflationary $BENTHIC emission with halving eras.
-- **`engine/pool.py`** — the Trench: verified-work share accounting and reward split.
+- **`engine/emission.py`** — disinflationary $DELLMOD emission with halving eras.
+- **`engine/pool.py`** — the Backplane: verified-work share accounting and reward split.
 - **`engine/verify.py`** — the Proof-of-Useful-Compute verification game.
 - **`engine/network.py`** — miner/network model and the telemetry snapshot builder.
 - **`engine/pipeline.py`** — writes `data.json` for the dashboard.
@@ -123,8 +122,8 @@ flowchart LR
 
 ```bash
 # 1. clone
-git clone https://github.com/benthicdate/Benthic.git
-cd Benthic
+git clone https://github.com/nuttumrunit/Dellmod.git
+cd Dellmod
 
 # 2. install dev deps (runtime is stdlib-only)
 python -m pip install -r requirements.txt
@@ -142,10 +141,10 @@ python -m engine.server            # http://localhost:8777
 ### Docker
 
 ```bash
-docker build -t benthic .
-docker run -p 8777:8777 benthic
+docker build -t dellmod .
+docker run -p 8777:8777 dellmod
 # or pull the published image:
-docker run -p 8777:8777 ghcr.io/benthicdate/benthic:latest
+docker run -p 8777:8777 ghcr.io/nuttumrunit/dellmod:latest
 ```
 
 ---
@@ -192,19 +191,19 @@ curl http://localhost:8777/api/network | python -m json.tool | head
 
 ## Tokenomics
 
-**$BENTHIC** is the network's unit of account — customers pay for compute in it, miners earn it,
+**$DELLMOD** is the network's unit of account — customers pay for compute in it, miners earn it,
 verifiers are bonded in it. Emission halves every era so early growth is well rewarded while supply
 is capped.
 
 | Parameter | Value (preview) |
 |-----------|-----------------|
-| Ticker | **BENTHIC** |
+| Ticker | **DELLMOD** |
 | Max mined supply | 1,000,000,000 |
 | Emission (era 1) | 20,000 / epoch |
 | Halving interval | every 25,000 epochs (~2.85 yr) |
 | Mining epoch | 1 hour |
 | Pool fee | 1.5% |
-| Settlement chain | Robinhood Chain (L2) |
+| Settlement chain | Solana |
 
 | Emission stream | Share | Recipient |
 |-----------------|-------|-----------|
@@ -219,15 +218,14 @@ is capped.
 ## Project structure
 
 ```
-Benthic/
+Dellmod/
 ├── index.html            # whitepaper (static site root)
 ├── terminal.html         # live network dashboard
 ├── data.json             # dashboard telemetry (built by the engine)
 ├── assets/               # logo + favicons
-├── CNAME                 # custom domain: benthic.one
 ├── engine/               # backend — the reference PoUC implementation
 │   ├── emission.py        · halving emission schedule
-│   ├── pool.py            · the Trench mining pool
+│   ├── pool.py            · the Backplane mining pool
 │   ├── verify.py          · verification game
 │   ├── network.py         · miner model + telemetry builder
 │   ├── pipeline.py        · writes data.json
@@ -241,9 +239,9 @@ Benthic/
 
 ## Roadmap
 
-- [x] **Phase 0 — Fair launch.** $BENTHIC launches as a community coin.
-- [ ] **Phase 1 — Testnet mining.** PoUC client, verifier mesh, the Trench pool (preview telemetry — *live now*).
-- [ ] **Phase 2 — Settlement.** `BenthicPool.sol` deploys to Robinhood Chain; epochs settle on-chain.
+- [x] **Phase 0 — Fair launch.** $DELLMOD launches as a community coin.
+- [ ] **Phase 1 — Testnet mining.** PoUC client, verifier mesh, the Backplane pool (preview telemetry — *live now*).
+- [ ] **Phase 2 — Settlement.** `Dellmod Pool Program` deploys to Solana; epochs settle on-chain.
 - [ ] **Phase 3 — Open market.** External customers submit paid AI jobs; rewards shift from emission to real demand.
 
 ---
@@ -255,16 +253,16 @@ keep the economic primitives tested, and keep PRs small and focused.
 
 ## Security
 
-Found a vulnerability? Please email **hello@benthic.one** rather than opening a public issue.
+Found a vulnerability? Please email **GitHub Issues** rather than opening a public issue.
 
 ## License
 
-[MIT](LICENSE) © 2026 Benthic Labs.
+[MIT](LICENSE) © 2026 Dellmod Labs.
 
 ## Disclaimer
 
 This repository is a technical and conceptual reference provided for information only. It is **not**
-financial, investment or legal advice, and **not** an offer to buy any asset. $BENTHIC is a community
-token; the mining network, settlement contracts, parameters and emission figures here are design
+financial, investment or legal advice, and **not** an offer to buy any asset. $DELLMOD is a community
+token; the mining network, settlement programs, parameters and emission figures here are design
 targets that are **not yet deployed** and may change. Digital assets are volatile — never risk more
 than you can afford to lose.

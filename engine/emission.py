@@ -1,4 +1,4 @@
-"""$BENTHIC emission schedule.
+"""$DELLMOD emission schedule.
 
 Emission is *disinflationary*: a fixed number of tokens is minted per epoch,
 halving every ``HALVING`` epochs so that early network growth is well rewarded
@@ -12,9 +12,9 @@ the network grows.
 from __future__ import annotations
 
 # --- protocol constants (preview; subject to community calibration) ----------
-DEFAULT_E0: float = 20_000.0       # $BENTHIC minted per epoch during era 1
+DEFAULT_E0: float = 20_000.0       # $DELLMOD minted per epoch during era 1
 DEFAULT_HALVING: int = 25_000      # epochs per era (~2.85 years at 1-hour epochs)
-# -> hard cap = 2 * E0 * H = 1,000,000,000 BENTHIC
+# -> hard cap = 2 * E0 * H = 1,000,000,000 DELLMOD
 
 
 def era(epoch: int, halving: int = DEFAULT_HALVING) -> int:
@@ -31,7 +31,7 @@ def emission(epoch: int, e0: float = DEFAULT_E0, halving: int = DEFAULT_HALVING)
 
 def cumulative_supply(epoch: int, e0: float = DEFAULT_E0,
                       halving: int = DEFAULT_HALVING) -> float:
-    """Total $BENTHIC minted over epochs ``[0, epoch)``."""
+    """Total $DELLMOD minted over epochs ``[0, epoch)``."""
     if epoch < 0:
         raise ValueError("epoch must be >= 0")
     full_eras = epoch // halving
@@ -46,6 +46,6 @@ def max_supply(e0: float = DEFAULT_E0, halving: int = DEFAULT_HALVING) -> float:
 
 
 if __name__ == "__main__":  # pragma: no cover
-    print(f"era-1 emission/epoch : {emission(0):,.2f} BENTHIC")
-    print(f"era-2 emission/epoch : {emission(DEFAULT_HALVING):,.2f} BENTHIC")
-    print(f"max mined supply     : {max_supply():,.0f} BENTHIC")
+    print(f"era-1 emission/epoch : {emission(0):,.2f} DELLMOD")
+    print(f"era-2 emission/epoch : {emission(DEFAULT_HALVING):,.2f} DELLMOD")
+    print(f"max mined supply     : {max_supply():,.0f} DELLMOD")
