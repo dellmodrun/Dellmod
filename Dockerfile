@@ -4,8 +4,8 @@ FROM python:3.12-slim
 
 LABEL org.opencontainers.image.title="Dellmod" \
       org.opencontainers.image.description="Proof-of-Useful-Compute mining for AI, settled on Solana." \
-      org.opencontainers.image.source="https://github.com/nuttumrunit/Dellmod" \
-      org.opencontainers.image.url="https://nuttumrunit.github.io/Dellmod/" \
+      org.opencontainers.image.source="https://github.com/dellmodrun/Dellmod" \
+      org.opencontainers.image.url="https://dellmodrun.github.io/Dellmod/" \
       org.opencontainers.image.licenses="MIT"
 
 WORKDIR /app

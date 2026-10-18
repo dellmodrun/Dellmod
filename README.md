@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/nuttumrunit/Dellmod/actions/workflows/ci.yml"><img alt="tests" src="https://github.com/nuttumrunit/Dellmod/actions/workflows/ci.yml/badge.svg?branch=master"></a>
-  <a href="https://github.com/nuttumrunit/Dellmod/actions/workflows/docker.yml"><img alt="container" src="https://github.com/nuttumrunit/Dellmod/actions/workflows/docker.yml/badge.svg?branch=master"></a>
-  <a href="https://github.com/nuttumrunit/Dellmod/pkgs/container/dellmod"><img alt="ghcr" src="https://img.shields.io/badge/ghcr.io-image-2496ed?logo=docker&logoColor=white"></a>
-  <a href="https://nuttumrunit.github.io/Dellmod/"><img alt="site" src="https://img.shields.io/badge/site-Dellmod-16fc34?logo=googlechrome&logoColor=white"></a>
+  <a href="https://github.com/dellmodrun/Dellmod/actions/workflows/ci.yml"><img alt="tests" src="https://github.com/dellmodrun/Dellmod/actions/workflows/ci.yml/badge.svg?branch=master"></a>
+  <a href="https://github.com/dellmodrun/Dellmod/actions/workflows/docker.yml"><img alt="container" src="https://github.com/dellmodrun/Dellmod/actions/workflows/docker.yml/badge.svg?branch=master"></a>
+  <a href="https://github.com/dellmodrun/Dellmod/pkgs/container/dellmod"><img alt="ghcr" src="https://img.shields.io/badge/ghcr.io-image-2496ed?logo=docker&logoColor=white"></a>
+  <a href="https://dellmodrun.github.io/Dellmod/"><img alt="site" src="https://img.shields.io/badge/site-Dellmod-16fc34?logo=googlechrome&logoColor=white"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.10%2B-3ecf8e?logo=python&logoColor=white">
   <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-16fc34"></a>
   <a href="https://x.com/dellmodrun"><img alt="X" src="https://img.shields.io/badge/X-%40dellmodrun-111?logo=x&logoColor=white"></a>
@@ -58,9 +58,9 @@ verifiable capacity that settles into value.
 > mining network in this repo is the reference implementation being built on top of it. The dashboard
 > currently shows clearly-labelled **sample telemetry**.
 
-- 🌐 **Website:** https://nuttumrunit.github.io/Dellmod/
-- 📈 **Live dashboard:** https://nuttumrunit.github.io/Dellmod/terminal.html
-- 📄 **Whitepaper:** https://nuttumrunit.github.io/Dellmod/index.html
+- 🌐 **Website:** https://dellmodrun.github.io/Dellmod/
+- 📈 **Live dashboard:** https://dellmodrun.github.io/Dellmod/terminal.html
+- 📄 **Whitepaper:** https://dellmodrun.github.io/Dellmod/index.html
 - 🪙 **Buy $DELLMOD:** https://pump.fun/
 
 ---
@@ -123,7 +123,7 @@ flowchart LR
 
 ```bash
 # 1. clone
-git clone https://github.com/nuttumrunit/Dellmod.git
+git clone https://github.com/dellmodrun/Dellmod.git
 cd Dellmod
 
 # 2. install dev deps (runtime is stdlib-only)
@@ -145,7 +145,7 @@ python -m engine.server            # http://localhost:8777
 docker build -t dellmod .
 docker run -p 8777:8777 dellmod
 # or pull the published image:
-docker run -p 8777:8777 ghcr.io/nuttumrunit/dellmod:latest
+docker run -p 8777:8777 ghcr.io/dellmodrun/dellmod:latest
 ```
 
 ---

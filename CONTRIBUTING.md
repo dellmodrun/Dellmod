@@ -5,7 +5,7 @@ Thanks for your interest in Dellmod 🐙 — contributions are welcome.
 ## Getting started
 
 ```bash
-git clone https://github.com/nuttumrunit/Dellmod.git
+git clone https://github.com/dellmodrun/Dellmod.git
 cd Dellmod
 python -m pip install -r requirements.txt
 python -m pytest -q          # run the test suite
