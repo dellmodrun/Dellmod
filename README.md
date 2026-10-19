@@ -61,7 +61,7 @@ verifiable capacity that settles into value.
 - 🌐 **Website:** https://dellmod.fun/
 - 📈 **Live dashboard:** https://dellmod.fun/terminal.html
 - 📄 **Whitepaper:** https://dellmod.fun/index.html
-- 🪙 **Buy $DELLMOD:** https://pump.fun/coin/BG7321meCAhd2uco5mx8QFhfoaBU122K2fSG8Y1epump
+- 🪙 **Buy $DELLMOD:** https://pump.fun/
 
 ---
 
